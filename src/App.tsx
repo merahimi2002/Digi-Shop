@@ -1,11 +1,12 @@
+import { Fragment } from "react/jsx-runtime";
+import Navbar from "./component/Navbar";
 
 function App() {
-
   return (
-    <>
-      <h1>hi</h1>
-    </>
-  )
+    <Fragment>
+      <Navbar />
+    </Fragment>
+  );
 }
 
-export default App
+export default App;
