@@ -1,6 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
 import { Outlet } from "react-router-dom";
-import Navbar from "../component/Navbar";
+import Navbar from "../component/Navbar/Navbar";
 
 
 const Layout = () => {

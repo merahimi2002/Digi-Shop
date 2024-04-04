@@ -30,6 +30,7 @@ export const ColorModeSwitch = () => {
           background: "none",
         }}
         onClick={toggleColorMode}
+        color="FirstColor"
       >
         {icon}
       </Button>

@@ -9,9 +9,10 @@ export const styles = {
         color: "FirstColor",
         background: "none",
       },
-      _focus:{
+      _focus: {
         background: "none",
-      }
+      },
     },
+    // "*": {},
   },
 };
