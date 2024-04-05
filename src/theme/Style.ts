@@ -1,5 +1,8 @@
 export const styles = {
   global: {
+    body: {
+     
+    },
     a: {
       _hover: {
         color: "FirstColor",
