@@ -5,7 +5,7 @@ import logo from "../../../public/image/Logo.png";
 const Logo = () => {
   return (
     <Center h={{base : "auto" , md :"100%"}}>
-      <NavLink to="/">
+      <NavLink to="/Digi-Shop">
         <Image src={logo} w={{ base: "80px", md: "100px" }}></Image>
       </NavLink>
     </Center>

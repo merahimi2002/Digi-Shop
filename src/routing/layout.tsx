@@ -1,6 +1,8 @@
 import { Fragment } from "react/jsx-runtime";
 import { Outlet } from "react-router-dom";
 import Navbar from "../component/Navbar/Navbar";
+import Footer from "../component/Footer";
+
 
 
 const Layout = () => {
@@ -10,6 +12,7 @@ const Layout = () => {
       <div id="main">
         <Outlet />
       </div>
+      <Footer />
     </Fragment>
   );
 };

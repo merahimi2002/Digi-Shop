@@ -11,9 +11,9 @@ const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Homepage /> },
-      { path: "/about", element: <AboutUs /> },
-      { path: "/contact", element: <ContactUs /> },
+      { path: "/Digi-Shop", element: <Homepage /> },
+      { path: "/Digi-Shop/about", element: <AboutUs /> },
+      { path: "/Digi-Shop/contact", element: <ContactUs /> },
     ],
   },
 ]);
