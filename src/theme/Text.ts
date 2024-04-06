@@ -12,7 +12,7 @@ export const textStyles = {
     letterSpacing: "-1%",
   },
   Titr: {
-    fontSize: ["25px", "30px"],
+    fontSize: ["1.25rem","1.75rem"],
     fontWeight: "semibold",
     lineHeight: "110%",
     letterSpacing: "-1%",
@@ -21,7 +21,7 @@ export const textStyles = {
     marginTop: "10px",
   },
   TitrColorFul: {
-    fontSize: ["25px", "30px"],
+    fontSize: ["1.25rem","1.75rem"],
     fontWeight: "semibold",
     lineHeight: "110%",
     letterSpacing: "-1%",

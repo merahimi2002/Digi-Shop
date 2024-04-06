@@ -12,7 +12,7 @@ const ErrorPage = () => {
   return (
     <Fragment>
       <Navbar />
-      <Center fontSize="100px">
+      <Center fontSize="100px" mt={20}>
         <Image src={isRouteErrorResponse(error) ? ErrorFourOFour : Error} />
       </Center>
       <Footer />

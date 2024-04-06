@@ -1,7 +1,12 @@
+import { Fragment } from "react/jsx-runtime";
+import CarouselSlider from "../component/CarouselSlider";
+
 const Homepage = () => {
   return (
-    <div>Homepage</div>
-  )
-}
+    <Fragment>
+      <CarouselSlider />
+    </Fragment>
+  );
+};
 
-export default Homepage
+export default Homepage;

@@ -19,11 +19,11 @@ const Footer = () => {
       p={{ base: "10px", md: "30px 80px" }}
       bg="SecondColor"
       color="black"
-      mt={5}
+      mt={10}
     >
       <GridItem colSpan={[12, 3]}>
         <NavLink to="/Digi-Shop">
-          <Image src={logo} w={200} mb={5}></Image>
+          <Image src={logo} w={170} mb={5}></Image>
         </NavLink>
         <Text color="black">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ex
@@ -39,33 +39,33 @@ const Footer = () => {
           </Text>
         </Text>
         <List spacing={3}>
-          <ListItem fontSize="20px" display="flex" alignItems="center">
+          <ListItem fontSize="18px" display="flex" alignItems="center">
             <ListIcon
-              fontSize="16px"
+              fontSize="14px"
               as={ArrowRightIcon}
               color="FirstColor"
             ></ListIcon>
             <NavLink to="/Digi-Shop">Home</NavLink>
           </ListItem>
-          <ListItem fontSize="20px" display="flex" alignItems="center">
+          <ListItem fontSize="18px" display="flex" alignItems="center">
             <ListIcon
-              fontSize="16px"
+              fontSize="14px"
               as={ArrowRightIcon}
               color="FirstColor"
             ></ListIcon>
             <NavLink to="/Digi-Shop/about">About Us</NavLink>
           </ListItem>
-          <ListItem fontSize="20px" display="flex" alignItems="center">
+          <ListItem fontSize="18px" display="flex" alignItems="center">
             <ListIcon
-              fontSize="16px"
+              fontSize="14px"
               as={ArrowRightIcon}
               color="FirstColor"
             ></ListIcon>
             <NavLink to="/Digi-Shop/contact">Contact Us</NavLink>
           </ListItem>
-          <ListItem fontSize="20px" display="flex" alignItems="center">
+          <ListItem fontSize="18px" display="flex" alignItems="center">
             <ListIcon
-              fontSize="16px"
+              fontSize="14px"
               as={ArrowRightIcon}
               color="FirstColor"
             ></ListIcon>
@@ -81,25 +81,25 @@ const Footer = () => {
           </Text>
         </Text>
         <List spacing={3}>
-          <ListItem fontSize="20px" display="flex" alignItems="center">
+          <ListItem fontSize="18px" display="flex" alignItems="center">
             <ListIcon
-              fontSize="16px"
+              fontSize="14px"
               as={PhoneIcon}
               color="FirstColor"
             ></ListIcon>
             <Link to="tel:+982177123456">021-77123456</Link>
           </ListItem>
-          <ListItem fontSize="20px" display="flex" alignItems="center">
+          <ListItem fontSize="18px" display="flex" alignItems="center">
             <ListIcon
-              fontSize="16px"
+              fontSize="14px"
               as={PhoneIcon}
               color="FirstColor"
             ></ListIcon>
             <Link to="tel:+982177123456">021-77123456</Link>
           </ListItem>
-          <ListItem fontSize="20px" display="flex" alignItems="center">
+          <ListItem fontSize="18px" display="flex" alignItems="center">
             <ListIcon
-              fontSize="20px"
+              fontSize="14px"
               as={EmailIcon}
               color="FirstColor"
             ></ListIcon>

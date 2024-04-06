@@ -12,10 +12,10 @@ const NavBarAction = () => {
   return (
     <Center h={["auto", "100%"]} mt={["10px", "0px"]}>
       <AvatarGroup gap={2}>
-        <Button p={0} _hover={{ bgColor: "SecondColor" }}>
+        <Button p={0} bg="NoColor" _hover={{ bg: "NoColor" }}>
           <Avatar
             icon={<FiShoppingCart />}
-            bgColor="SecondColor"
+            bgColor="NoColor"
             color="FirstColor"
             fontSize="30px"
           >
@@ -31,10 +31,10 @@ const NavBarAction = () => {
             </AvatarBadge>
           </Avatar>
         </Button>
-        <Button p={0} _hover={{ bgColor: "SecondColor" }}>
+        <Button p={0} bg="NoColor" _hover={{ bg: "NoColor" }}>
           <Avatar
             icon={<GiEternalLove />}
-            bgColor="SecondColor"
+            bgColor="NoColor"
             color="FirstColor"
             fontSize="30px"
           >
@@ -52,12 +52,13 @@ const NavBarAction = () => {
         </Button>
         <Button
           p={0}
-          _hover={{ bgColor: "SecondColor" }}
+          bg="NoColor"
+          _hover={{ bgColor: "NoColor" }}
           display={["none", "flex"]}
         >
           <Avatar
             icon={<FiLogIn />}
-            bgColor="SecondColor"
+            bgColor="NoColor"
             color="FirstColor"
             fontSize="30px"
           ></Avatar>

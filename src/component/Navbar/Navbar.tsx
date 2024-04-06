@@ -7,15 +7,19 @@ import Logo from "./NavbarLogo";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-  const NavbarBG = useColorModeValue("SecondColor", "SecondColor");
+  const NavbarBG = useColorModeValue("NavbarColor", "NavbarColor");
 
   return (
     <Grid
       templateColumns="repeat(12, 1fr)"
       gap={5}
       p={{ base: "10px", md: "10px 40px" }}
-      mb={5}
       bg={NavbarBG}
+      position="fixed"
+      top={0}
+      left={0}
+      w="100%"
+      zIndex={99}
     >
       <GridItem colSpan={{ base: 3, md: 1 }}>
         <Logo />

@@ -1,7 +1,7 @@
-const AboutUs = () => {
-  return (
-    <div>AboutUs</div>
-  )
-}
+import { Text } from "@chakra-ui/react";
 
-export default AboutUs
+const AboutUs = () => {
+  return <Text mt="120px">AboutUs</Text>;
+};
+
+export default AboutUs;
