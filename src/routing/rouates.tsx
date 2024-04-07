@@ -4,6 +4,7 @@ import Homepage from "../pages/Homepage";
 import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import ErrorPage from "./ErrorPage";
+import Product from "../pages/Product";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       { path: "/Digi-Shop", element: <Homepage /> },
       { path: "/Digi-Shop/about", element: <AboutUs /> },
       { path: "/Digi-Shop/contact", element: <ContactUs /> },
+      { path: "/Digi-Shop/product", element: <Product/> },
     ],
   },
 ]);
