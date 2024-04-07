@@ -7,7 +7,7 @@ interface ProductsListProps {
   price: number;
 }
 
-const UseProductList = () => {
+const useProductList = () => {
   const fetchProducts = () =>
     axios
       .get<ProductsListProps[]>("https://fakestoreapi.com/products")
@@ -18,4 +18,4 @@ const UseProductList = () => {
   });
 };
 
-export default UseProductList;
+export default useProductList;
