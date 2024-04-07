@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import BaseUrl from "../BaseUrl";
 
 interface ProductsListProps {
   id: number;
@@ -10,7 +11,7 @@ interface ProductsListProps {
 const useProductList = () => {
   const fetchProducts = () =>
     axios
-      .get<ProductsListProps[]>("https://fakestoreapi.com/products")
+      .get<ProductsListProps[]>(BaseUrl("products"))
       .then((res) => res.data);
   return useQuery<ProductsListProps[], Error>({
     queryKey: ["Products"],

@@ -1,5 +1,5 @@
 import { Text } from "@chakra-ui/react";
-import ProductList from "../data/ProductList";
+import ProductList from "../data/ProductList/ProductList";
 
 const AboutUs = () => {
   return (

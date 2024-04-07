@@ -1,5 +1,5 @@
 import { List, ListItem, Spinner } from "@chakra-ui/react";
-import useProductList from "./hooks/useProductList";
+import useProductList from "./UseProductList";
 
 const ProductList = () => {
   const { data: products, error, isLoading } = useProductList();
