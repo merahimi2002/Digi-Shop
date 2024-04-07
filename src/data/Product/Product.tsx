@@ -1,8 +1,8 @@
 import { List, ListItem, Spinner } from "@chakra-ui/react";
-import useProductList from "./UseProductList";
+import useProducts from "./UseProduct";
 
-const ProductList = () => {
-  const { data: products, error, isLoading } = useProductList();
+const Product = () => {
+  const { data: products, error, isLoading } = useProducts();
 
   if (isLoading)
     return (
@@ -25,4 +25,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default Product;
