@@ -8,6 +8,7 @@ import {
   ListItem,
   ListIcon,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import logo from "../../public/image/Logo.png";
 import { ArrowRightIcon, EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 
@@ -40,7 +41,13 @@ const Footer = () => {
           </Text>
         </Text>
         <List spacing={3}>
-          <ListItem fontSize="18px" display="flex" alignItems="center">
+          <ListItem
+            fontSize="18px"
+            display="flex"
+            alignItems="center"
+            as={motion.div}
+            whileHover={{ translate: "10px" }}
+          >
             <ListIcon
               fontSize="14px"
               as={ArrowRightIcon}
@@ -48,7 +55,13 @@ const Footer = () => {
             ></ListIcon>
             <NavLink to="/Digi-Shop">Home</NavLink>
           </ListItem>
-          <ListItem fontSize="18px" display="flex" alignItems="center">
+          <ListItem
+            fontSize="18px"
+            display="flex"
+            alignItems="center"
+            as={motion.div}
+            whileHover={{ translate: "10px" }}
+          >
             <ListIcon
               fontSize="14px"
               as={ArrowRightIcon}
@@ -56,7 +69,13 @@ const Footer = () => {
             ></ListIcon>
             <NavLink to="/Digi-Shop/about">About Us</NavLink>
           </ListItem>
-          <ListItem fontSize="18px" display="flex" alignItems="center">
+          <ListItem
+            fontSize="18px"
+            display="flex"
+            alignItems="center"
+            as={motion.div}
+            whileHover={{ translate: "10px" }}
+          >
             <ListIcon
               fontSize="14px"
               as={ArrowRightIcon}
@@ -64,7 +83,13 @@ const Footer = () => {
             ></ListIcon>
             <NavLink to="/Digi-Shop/contact">Contact Us</NavLink>
           </ListItem>
-          <ListItem fontSize="18px" display="flex" alignItems="center">
+          <ListItem
+            fontSize="18px"
+            display="flex"
+            alignItems="center"
+            as={motion.div}
+            whileHover={{ translate: "10px" }}
+          >
             <ListIcon
               fontSize="14px"
               as={ArrowRightIcon}
@@ -82,7 +107,13 @@ const Footer = () => {
           </Text>
         </Text>
         <List spacing={3}>
-          <ListItem fontSize="18px" display="flex" alignItems="center">
+          <ListItem
+            fontSize="18px"
+            display="flex"
+            alignItems="center"
+            as={motion.div}
+            whileHover={{ translate: "10px" }}
+          >
             <ListIcon
               fontSize="14px"
               as={PhoneIcon}
@@ -90,7 +121,13 @@ const Footer = () => {
             ></ListIcon>
             <Link to="tel:+982177123456">021-77123456</Link>
           </ListItem>
-          <ListItem fontSize="18px" display="flex" alignItems="center">
+          <ListItem
+            fontSize="18px"
+            display="flex"
+            alignItems="center"
+            as={motion.div}
+            whileHover={{ translate: "10px" }}
+          >
             <ListIcon
               fontSize="14px"
               as={PhoneIcon}
@@ -98,7 +135,13 @@ const Footer = () => {
             ></ListIcon>
             <Link to="tel:+982177123456">021-77123456</Link>
           </ListItem>
-          <ListItem fontSize="18px" display="flex" alignItems="center">
+          <ListItem
+            fontSize="18px"
+            display="flex"
+            alignItems="center"
+            as={motion.div}
+            whileHover={{ translate: "10px" }}
+          >
             <ListIcon
               fontSize="14px"
               as={EmailIcon}

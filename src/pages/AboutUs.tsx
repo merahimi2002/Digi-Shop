@@ -12,7 +12,11 @@ import {
 } from "@chakra-ui/react";
 import { FaCheckCircle, FaBusinessTime } from "react-icons/fa";
 import { RiCustomerService2Line } from "react-icons/ri";
-import { MdMiscellaneousServices } from "react-icons/md";
+import {
+  MdMiscellaneousServices,
+  MdHighQuality,
+  MdPayments,
+} from "react-icons/md";
 import Picture from "../../public/image/About.jpg";
 
 const AboutUs = () => {
@@ -85,6 +89,7 @@ const AboutUs = () => {
       <Grid
         templateColumns="repeat(12, 1fr)"
         mb="100px"
+        mt="50px"
         gap={5}
         p={{ base: "10px", md: "10px 80px" }}
       >
@@ -93,7 +98,7 @@ const AboutUs = () => {
             <Text textStyle="SpecialTitr">Our Mission</Text>
           </Center>
         </GridItem>
-        <GridItem colSpan={{ base: 12, md: 4 }} px={5}>
+        <GridItem colSpan={{ base: 12, md: 4 }} px={5} mb={5}>
           <Center
             h="100%"
             display="flex"
@@ -116,7 +121,7 @@ const AboutUs = () => {
             </Text>
           </Center>
         </GridItem>
-        <GridItem colSpan={{ base: 12, md: 4 }} px={5}>
+        <GridItem colSpan={{ base: 12, md: 4 }} px={5} mb={5}>
           <Center
             h="100%"
             display="flex"
@@ -139,7 +144,7 @@ const AboutUs = () => {
             </Text>
           </Center>
         </GridItem>
-        <GridItem colSpan={{ base: 12, md: 4 }} px={5}>
+        <GridItem colSpan={{ base: 12, md: 4 }} px={5} mb={5}>
           <Center
             h="100%"
             display="flex"
@@ -160,6 +165,55 @@ const AboutUs = () => {
               you'll find an extensive selection of digital products and
               services carefully curated to cater to diverse preferences and
               requirements
+            </Text>
+          </Center>
+        </GridItem>
+        <GridItem colSpan={{ base: 12, md: 2 }}></GridItem>
+        <GridItem colSpan={{ base: 12, md: 4 }} px={5}>
+          <Center
+            h="100%"
+            display="flex"
+            flexDirection="column"
+            boxShadow="2xl"
+            p={5}
+            rounded="md"
+            _hover={{ background: "SecondColor" }}
+            transition="0.4s"
+          >
+            <Icon
+              fontSize="50px"
+              color="FirstColor"
+              as={MdHighQuality}
+              mb={5}
+            ></Icon>
+            <Text textAlign="center">
+              We prioritize quality and reliability in all our digital
+              offerings, ensuring that every product meets the highest standards
+              of excellence.
+            </Text>
+          </Center>
+        </GridItem>
+        <GridItem colSpan={{ base: 12, md: 4 }} px={5}>
+          <Center
+            h="100%"
+            display="flex"
+            flexDirection="column"
+            boxShadow="2xl"
+            p={5}
+            rounded="md"
+            _hover={{ background: "SecondColor" }}
+            transition="0.4s"
+          >
+            <Icon
+              fontSize="50px"
+              color="FirstColor"
+              as={MdPayments}
+              mb={5}
+            ></Icon>
+            <Text textAlign="center">
+              We provide secure payment options and adhere to strict security
+              protocols to safeguard your personal information and ensure a safe
+              shopping experience.
             </Text>
           </Center>
         </GridItem>
