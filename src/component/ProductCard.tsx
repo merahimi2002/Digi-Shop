@@ -15,7 +15,7 @@ const ProductCard = ({
   price,
 }: ProductsCardProps) => {
   return (
-    <Card>
+    <Card boxShadow='base'>
       <CardHeader p={5}>
         <Image w="100%" h="300px" objectFit="cover" src={image}></Image>
       </CardHeader>

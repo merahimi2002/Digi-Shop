@@ -26,8 +26,9 @@ const Footer = () => {
           <Image src={logo} w={170} mb={5}></Image>
         </NavLink>
         <Text color="black">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ex
-          quia molestias dignissimos ipsum
+          <strong color="red">Digi Shop </strong>
+          Offer a diverse range of digital products and services to cater to
+          different customer needs.
         </Text>
       </GridItem>
       <GridItem colSpan={[0, 2]}></GridItem>

@@ -15,6 +15,7 @@ const Navbar = () => {
       gap={5}
       p={{ base: "10px", md: "10px 40px" }}
       bg={NavbarBG}
+      boxShadow='lg'
       position="fixed"
       top={0}
       left={0}

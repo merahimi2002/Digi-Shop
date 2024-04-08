@@ -1,8 +1,6 @@
 export const styles = {
   global: {
-    body: {
-     
-    },
+    body: {},
     a: {
       _hover: {
         color: "FirstColor",
@@ -15,6 +13,9 @@ export const styles = {
       _focus: {
         background: "none",
       },
+    },
+    strong: {
+      color: "FirstColor",
     },
     // "*": {},
   },

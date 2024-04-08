@@ -12,7 +12,7 @@ export const textStyles = {
     letterSpacing: "-1%",
   },
   Titr: {
-    fontSize: ["1.25rem","1.75rem"],
+    fontSize: ["1.25rem", "1.75rem"],
     fontWeight: "semibold",
     lineHeight: "110%",
     letterSpacing: "-1%",
@@ -21,7 +21,7 @@ export const textStyles = {
     marginTop: "10px",
   },
   TitrColorFul: {
-    fontSize: ["1.25rem","1.75rem"],
+    fontSize: ["1.25rem", "1.75rem"],
     fontWeight: "semibold",
     lineHeight: "110%",
     letterSpacing: "-1%",
@@ -29,4 +29,22 @@ export const textStyles = {
     marginBottom: "30px",
     marginTop: "10px",
   },
+  SpecialTitr: {
+    fontSize: ["1.25rem", "1.75rem"],
+    fontWeight: "semibold",
+    lineHeight: "110%",
+    letterSpacing: "-1%",
+    color: "FirstColor",
+    marginBottom: "30px",
+    marginTop: "10px",
+    background: "#edf2f754",
+    padding: "10px 20px",
+    width: "fit-content",
+    borderRadius: "5px",
+    borderLeft: "3px solid #7d99b5",
+  },
+  p :{
+    fontSize: ["14px", "16px"],
+    lineHeight: "160%",
+  }
 };
