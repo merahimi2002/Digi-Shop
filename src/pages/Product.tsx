@@ -1,12 +1,14 @@
-import { Text } from "@chakra-ui/react";
+import { Fragment } from "react/jsx-runtime";
+import { Box } from "@chakra-ui/react";
 import Product from "../data/Product/Product";
 
 const AboutUs = () => {
   return (
-    <>
-      <Text mt="120px">Product</Text>
-      <Product />
-    </>
+    <Fragment>
+      <Box mt="120px" p={{ base: "10px", md: "10px 80px" }}>
+        <Product />
+      </Box>
+    </Fragment>
   );
 };
 

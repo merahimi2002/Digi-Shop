@@ -1,8 +1,9 @@
-import { List, ListItem, Spinner } from "@chakra-ui/react";
+import { Grid, GridItem, Spinner } from "@chakra-ui/react";
 import useProducts from "./UseProduct";
+import ProductCard from "../../component/ProductCard";
 
 const Product = () => {
-  const { data: products, error, isLoading } = useProducts();
+  const { data, error, isLoading } = useProducts();
 
   if (isLoading)
     return (
@@ -17,11 +18,18 @@ const Product = () => {
   if (error) return <h1>{error.message}</h1>;
 
   return (
-    <List>
-      {products?.map((pro) => (
-        <ListItem key={pro.id}>{pro.title}</ListItem>
+    <Grid templateColumns="repeat(12, 1fr)" gap={5} p={5}>
+      {data?.map((pro) => (
+        <GridItem colSpan={{ base: 12, md: 6, lg: 4, "2xl": 3 }}>
+          <ProductCard
+            title={pro.title}
+            price={pro.price}
+            description={pro.description}
+            image={pro.image}
+          />
+        </GridItem>
       ))}
-    </List>
+    </Grid>
   );
 };
 
