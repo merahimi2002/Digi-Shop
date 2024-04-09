@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
+import { Grid, GridItem} from "@chakra-ui/react";
 import { MenuLinks, MenuToggle } from "./NavLinks";
 import NavBarAction from "./NavbarAction";
 import Logo from "./NavbarLogo";
@@ -7,16 +7,16 @@ import Logo from "./NavbarLogo";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-  const NavbarBG = useColorModeValue("NavbarColor", "NavbarColor");
 
   return (
     <Grid
       templateColumns="repeat(12, 1fr)"
       gap={5}
       p={{ base: "10px", md: "10px 40px" }}
-      bg={NavbarBG}
+      bg="SecondColorDM"
       boxShadow='lg'
       position="fixed"
+      backdropFilter="blur(50px)"
       top={0}
       left={0}
       w="100%"

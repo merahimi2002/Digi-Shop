@@ -18,7 +18,7 @@ const Footer = () => {
       templateColumns="repeat(12, 1fr)"
       gap={5}
       p={{ base: "10px", md: "30px 80px" }}
-      bg="SecondColor"
+      bg="SecondColorDM"
       color="black"
       mt={10}
     >

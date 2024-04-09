@@ -43,8 +43,8 @@ export const textStyles = {
     borderRadius: "5px",
     borderLeft: "3px solid #7d99b5",
   },
-  p :{
+  p: {
     fontSize: ["14px", "16px"],
     lineHeight: "160%",
-  }
+  },
 };

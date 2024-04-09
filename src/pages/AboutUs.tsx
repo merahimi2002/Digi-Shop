@@ -9,6 +9,7 @@ import {
   ListIcon,
   ListItem,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { FaCheckCircle, FaBusinessTime } from "react-icons/fa";
 import { RiCustomerService2Line } from "react-icons/ri";
@@ -20,6 +21,7 @@ import {
 import Picture from "../../public/image/About.jpg";
 
 const AboutUs = () => {
+  const SpecialTitrDM = useColorModeValue("#edf2f754", "#edf2f71f");
   return (
     <Fragment>
       <Grid
@@ -35,7 +37,9 @@ const AboutUs = () => {
           pl={{ base: "10px", md: "40px" }}
           colSpan={{ base: 12, md: 6 }}
         >
-          <Text textStyle="SpecialTitr">About Digi Shop</Text>
+          <Text textStyle="SpecialTitr" bg={SpecialTitrDM}>
+            About Digi Shop
+          </Text>
           <Text textStyle="p" mb={3}>
             Welcome to Digi Shop, your premier destination for high-quality
             digital products and services. At Digi Shop, we strive to provide
@@ -95,7 +99,9 @@ const AboutUs = () => {
       >
         <GridItem colSpan={12} mt={5}>
           <Center h="100%">
-            <Text textStyle="SpecialTitr">Our Mission</Text>
+            <Text textStyle="SpecialTitr" bg={SpecialTitrDM}>
+              Our Mission
+            </Text>
           </Center>
         </GridItem>
         <GridItem colSpan={{ base: 12, md: 4 }} px={5} mb={5}>
@@ -106,8 +112,14 @@ const AboutUs = () => {
             boxShadow="2xl"
             p={5}
             rounded="md"
-            _hover={{ background: "SecondColor" }}
+            _hover={{
+              background: "SecondColor",
+              color: "FirstColor",
+              borderColor: "#00000000",
+            }}
             transition="0.4s"
+            border="3px solid"
+            borderColor="#edf2f71f"
           >
             <Icon
               fontSize="50px"
@@ -129,8 +141,14 @@ const AboutUs = () => {
             boxShadow="2xl"
             p={5}
             rounded="md"
-            _hover={{ background: "SecondColor" }}
+            _hover={{
+              background: "SecondColor",
+              color: "FirstColor",
+              borderColor: "#00000000",
+            }}
             transition="0.4s"
+            border="3px solid"
+            borderColor="#edf2f71f"
           >
             <Icon
               fontSize="50px"
@@ -152,8 +170,14 @@ const AboutUs = () => {
             boxShadow="2xl"
             p={5}
             rounded="md"
-            _hover={{ background: "SecondColor" }}
+            _hover={{
+              background: "SecondColor",
+              color: "FirstColor",
+              borderColor: "#00000000",
+            }}
             transition="0.4s"
+            border="3px solid"
+            borderColor="#edf2f71f"
           >
             <Icon
               fontSize="50px"
@@ -177,8 +201,14 @@ const AboutUs = () => {
             boxShadow="2xl"
             p={5}
             rounded="md"
-            _hover={{ background: "SecondColor" }}
+            _hover={{
+              background: "SecondColor",
+              color: "FirstColor",
+              borderColor: "#00000000",
+            }}
             transition="0.4s"
+            border="3px solid"
+            borderColor="#edf2f71f"
           >
             <Icon
               fontSize="50px"
@@ -201,8 +231,14 @@ const AboutUs = () => {
             boxShadow="2xl"
             p={5}
             rounded="md"
-            _hover={{ background: "SecondColor" }}
+            _hover={{
+              background: "SecondColor",
+              color: "FirstColor",
+              borderColor: "#00000000",
+            }}
             transition="0.4s"
+            border="3px solid"
+            borderColor="#edf2f71f"
           >
             <Icon
               fontSize="50px"
