@@ -1,6 +1,6 @@
 import { Grid, GridItem, Spinner } from "@chakra-ui/react";
-import useProducts from "./UseProduct";
-import ProductCard from "../../component/ProductCard";
+import useProducts from "./UseGetProduct";
+import ProductCard from "./ProductCard";
 
 const Product = () => {
   const { data, error, isLoading } = useProducts();
@@ -22,6 +22,7 @@ const Product = () => {
       {data?.map((pro) => (
         <GridItem colSpan={{ base: 12, md: 6, lg: 4, "2xl": 3 }}>
           <ProductCard
+            id={pro.id}
             title={pro.title}
             price={pro.price}
             description={pro.description}

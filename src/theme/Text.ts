@@ -11,6 +11,10 @@ export const textStyles = {
     lineHeight: "110%",
     letterSpacing: "-1%",
   },
+  p: {
+    fontSize: ["14px", "16px"],
+    lineHeight: "160%",
+  },
   Titr: {
     fontSize: ["1.25rem", "1.75rem"],
     fontWeight: "semibold",
@@ -49,8 +53,9 @@ export const textStyles = {
     fontWeight: "semibold",
     margin: "10px 0",
   },
-  p: {
-    fontSize: ["14px", "16px"],
-    lineHeight: "160%",
-  },
+  Icon:{
+    fontSize: ["24px", "28px"],
+    fontWeight: "semibold",
+  }
+  
 };

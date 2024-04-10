@@ -1,3 +1,9 @@
 export const Button = {
-  baseStyle: {},
+  variants:{
+    'Shop':{
+      bg:"white",
+      p:"10px",
+      m:"10px"
+    }
+  }
 };
