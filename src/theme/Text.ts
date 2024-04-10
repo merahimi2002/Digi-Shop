@@ -43,6 +43,12 @@ export const textStyles = {
     borderRadius: "5px",
     borderLeft: "3px solid #7d99b5",
   },
+  Price :{
+    fontSize: ["20px", "24px"],
+    color:"red",
+    fontWeight: "semibold",
+    margin: "10px 0",
+  },
   p: {
     fontSize: ["14px", "16px"],
     lineHeight: "160%",

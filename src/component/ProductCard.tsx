@@ -26,6 +26,7 @@ const ProductCard = ({
         <Text minH={20}>
           <TextSummarizer text={description} maxChars={100} />
         </Text>
+        <Text textAlign="right" textStyle="Price">${price}</Text>
       </CardBody>
     </Card>
   );
