@@ -30,12 +30,12 @@ const AboutUs = () => {
         gap={5}
         p={{ base: "10px", md: "10px 80px" }}
       >
-        <GridItem colSpan={{ base: 12, md: 5 }}>
+        <GridItem colSpan={{ base: 12, md: 8, xl: 5 }}>
           <Image boxShadow="dark-lg" borderRadius={4} src={Picture}></Image>
         </GridItem>
         <GridItem
           pl={{ base: "10px", md: "40px" }}
-          colSpan={{ base: 12, md: 6 }}
+          colSpan={{ base: 12, md: 8, xl: 6 }}
         >
           <Text textStyle="SpecialTitr" bg={SpecialTitrDM}>
             About Digi Shop
@@ -94,7 +94,7 @@ const AboutUs = () => {
         templateColumns="repeat(12, 1fr)"
         mb="100px"
         mt="50px"
-        gap={5}
+        gap={10}
         p={{ base: "10px", md: "10px 80px" }}
       >
         <GridItem colSpan={12} mt={5}>
@@ -104,7 +104,12 @@ const AboutUs = () => {
             </Text>
           </Center>
         </GridItem>
-        <GridItem colSpan={{ base: 12, md: 4 }} px={5} mb={5}>
+        <GridItem
+          h="100%"
+          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          px={5}
+          mb={10}
+        >
           <Center
             h="100%"
             display="flex"
@@ -133,7 +138,12 @@ const AboutUs = () => {
             </Text>
           </Center>
         </GridItem>
-        <GridItem colSpan={{ base: 12, md: 4 }} px={5} mb={5}>
+        <GridItem
+          h="100%"
+          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          px={5}
+          mb={10}
+        >
           <Center
             h="100%"
             display="flex"
@@ -162,7 +172,12 @@ const AboutUs = () => {
             </Text>
           </Center>
         </GridItem>
-        <GridItem colSpan={{ base: 12, md: 4 }} px={5} mb={5}>
+        <GridItem
+          h="100%"
+          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          px={5}
+          mb={10}
+        >
           <Center
             h="100%"
             display="flex"
@@ -192,8 +207,12 @@ const AboutUs = () => {
             </Text>
           </Center>
         </GridItem>
-        <GridItem colSpan={{ base: 12, md: 2 }}></GridItem>
-        <GridItem colSpan={{ base: 12, md: 4 }} px={5}>
+        <GridItem
+          h="100%"
+          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          px={5}
+          mb={10}
+        >
           <Center
             h="100%"
             display="flex"
@@ -223,7 +242,12 @@ const AboutUs = () => {
             </Text>
           </Center>
         </GridItem>
-        <GridItem colSpan={{ base: 12, md: 4 }} px={5}>
+        <GridItem
+          h="100%"
+          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          px={5}
+          mb={10}
+        >
           <Center
             h="100%"
             display="flex"
