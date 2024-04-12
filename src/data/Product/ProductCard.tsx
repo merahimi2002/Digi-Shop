@@ -19,7 +19,7 @@ const ProductCard = ({
   price,
 }: ProductsCardProps) => {
 
-  const { count, increase, decrease } = useLoveProduct()
+  const { LoveQuantity, increase, decrease } = useLoveProduct()
 
   return (
     <Card boxShadow='base'>
@@ -36,7 +36,7 @@ const ProductCard = ({
         <Text textAlign="right" textStyle="Price">${price}</Text>
         <Flex align="center" justifyContent="center">
           <Box>
-            {count === 0 ? (
+            {LoveQuantity === 0 ? (
               <Button variant="Shop" onClick={increase}>
                 <Icon textStyle="Icon" color="FirstColor" as={FaRegHeart}></Icon>
               </Button  >

@@ -1,19 +1,21 @@
-import { Grid, GridItem, Spinner } from "@chakra-ui/react";
+import { Grid, GridItem} from "@chakra-ui/react";
 import useProducts from "./UseGetProduct";
 import ProductCard from "./ProductCard";
+import ProductCardSkeletons from "./ProductCardSkeletons";
 
 const Product = () => {
   const { data, error, isLoading } = useProducts();
+  const Skeletons = [1, 2, 3, 4, 5, 6 , 7 , 8]
 
   if (isLoading)
     return (
-      <Spinner
-        thickness="4px"
-        speed="0.65s"
-        emptyColor="gray.200"
-        color="blue.500"
-        size="xl"
-      />
+      <Grid templateColumns="repeat(12, 1fr)" gap={5} p={5}>
+        {Skeletons.map((pro) => (
+          <GridItem colSpan={{ base: 12, md: 6, lg: 4, "2xl": 3 }}>
+            <ProductCardSkeletons key={pro}/>
+          </GridItem>
+        ))}
+      </Grid>
     );
   if (error) return <h1>{error.message}</h1>;
 
