@@ -9,6 +9,8 @@ interface ProductsProps {
   category: string;
   description: string;
   image: string;
+  // add Attribute
+  LoveQuantity : number
 }
 
 const useProductList = () => {
