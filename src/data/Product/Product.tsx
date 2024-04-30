@@ -6,17 +6,25 @@ import useLoveProduct from "./useLoveProduct";
 
 const Product = () => {
   const { data, error, isLoading } = useProducts();
-  const { LoveQuantity } = useLoveProduct();
+  const { LoveID } = useLoveProduct();
 
   // add Attribute
-  data?.map((i) => {
-    i.LoveQuantity = LoveQuantity;
+
+  data?.map((index) => {
+    index.LoveQuantity = 0;
   });
+
+  data?.map((i) => {
+    if (i.id === LoveID) {
+      i.LoveQuantity = 1;
+    }
+  });
+
+  console.log(LoveID);
+  console.log(data);
 
   // skeletons
   const Skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
-
-  console.log(data);
 
   if (isLoading)
     return (

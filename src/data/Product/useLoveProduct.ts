@@ -1,15 +1,22 @@
 import { create } from "zustand";
 
 interface LoveStore {
-    LoveQuantity: number,
-    increase: () => void,
-    decrease: () => void,
+  LoveID: number;
+  increase: (id: number) => void;
+  decrease: (id: number) => void;
 }
 
-const useLoveProduct = create<LoveStore>(set => ({
-    LoveQuantity: 0,
-    increase: () => set(() => ({ LoveQuantity: 1 })),
-    decrease: () => set(() => ({ LoveQuantity: 0 }))
-}))
+const useLoveProduct = create<LoveStore>((set) => ({
+  LoveID: 0,
+  increase: (id) =>
+    set(() => ({
+      LoveID: id,
+    })),
 
-export default useLoveProduct
+  decrease: (id) =>
+    set(() => ({
+      LoveID: id,
+    })),
+}));
+
+export default useLoveProduct;

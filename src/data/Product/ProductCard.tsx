@@ -55,7 +55,7 @@ const ProductCard = ({
         <Flex align="center" justifyContent="center">
           <Box>
             {LoveQuantity === 0 ? (
-              <Button variant="Shop" onClick={increase}>
+              <Button variant="Shop" onClick={() => increase(id)}>
                 <Icon
                   textStyle="Icon"
                   color="FirstColor"
@@ -63,7 +63,7 @@ const ProductCard = ({
                 ></Icon>
               </Button>
             ) : (
-              <Button variant="Shop" onClick={decrease}>
+              <Button variant="Shop" onClick={() => decrease(id)}>
                 <Icon textStyle="Icon" color="FirstColor" as={FaHeart}></Icon>
               </Button>
             )}

@@ -10,7 +10,7 @@ interface ProductsProps {
   description: string;
   image: string;
   // add Attribute
-  LoveQuantity : number
+  LoveQuantity: number;
 }
 
 const useProductList = () => {
