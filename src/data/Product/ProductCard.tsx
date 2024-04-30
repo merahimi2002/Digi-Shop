@@ -19,6 +19,7 @@ import { TextSummarizer } from "../../services/TextSummarizer";
 import useLoveProduct from "./useLoveProduct";
 
 interface ProductsCardProps {
+  id: number;
   title: string;
   price: number;
   description: string;
@@ -27,6 +28,7 @@ interface ProductsCardProps {
 }
 
 const ProductCard = ({
+  id,
   image,
   title,
   description,

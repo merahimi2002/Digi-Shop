@@ -6,7 +6,7 @@ import useLoveProduct from "./useLoveProduct";
 
 const Product = () => {
   const { data, error, isLoading } = useProducts();
-  const { LoveQuantity} = useLoveProduct();
+  const { LoveQuantity } = useLoveProduct();
 
   // add Attribute
   data?.map((i) => {
@@ -16,7 +16,7 @@ const Product = () => {
   // skeletons
   const Skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
 
-  console.log(data)
+  console.log(data);
 
   if (isLoading)
     return (
@@ -35,6 +35,7 @@ const Product = () => {
       {data?.map((pro) => (
         <GridItem colSpan={{ base: 12, md: 6, lg: 4, "2xl": 3 }}>
           <ProductCard
+            id={pro.id}
             title={pro.title}
             price={pro.price}
             description={pro.description}
