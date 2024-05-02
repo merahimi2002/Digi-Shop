@@ -6,17 +6,20 @@ import useLoveProduct from "./useLoveProduct";
 
 const Product = () => {
   const { data, error, isLoading } = useProducts();
-  const { LoveID } = useLoveProduct();
+  const { QuantityLove, LoveID } = useLoveProduct();
 
   // add Attribute
+  //set the default to 0
 
   data?.map((index) => {
-    index.LoveQuantity = 0;
+    if (index.LoveQuantity == null) {
+      index.LoveQuantity = 0;
+    }
   });
 
   data?.map((i) => {
     if (i.id === LoveID) {
-      i.LoveQuantity = 1;
+      i.LoveQuantity = QuantityLove;
     }
   });
 

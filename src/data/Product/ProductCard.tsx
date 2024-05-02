@@ -40,7 +40,7 @@ const ProductCard = ({
   return (
     <Card boxShadow="base">
       <CardHeader p={5}>
-        <Image w="100%" h="300px" objectFit="cover" src={image}></Image>
+        <Image w="100%" h="300px" objectFit="contain" src={image}></Image>
       </CardHeader>
       <CardBody bg="SecondColor">
         <Text textStyle="TitrColorFul" mb={4} lineHeight={1.5} minH={20}>
