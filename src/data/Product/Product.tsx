@@ -41,7 +41,7 @@ const Product = () => {
   if (error) return <h1>{error.message}</h1>;
 
   return (
-    <Grid templateColumns="repeat(12, 1fr)" gap={5} p={5}>
+    <Grid templateColumns="repeat(12, 1fr)" gap={8} p={5}>
       {data?.map((pro) => (
         <GridItem colSpan={{ base: 12, md: 6, lg: 4, "2xl": 3 }}>
           <ProductCard

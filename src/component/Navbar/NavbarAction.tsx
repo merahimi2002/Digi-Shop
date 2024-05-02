@@ -1,6 +1,6 @@
 import { AvatarGroup, Center } from "@chakra-ui/react";
 import { ColorModeSwitch } from "../../theme/ColorModeSwitch";
-import { LoveButton, ShopButton } from "./NavbarActionItem";
+import { LoginButton, LoveButton, ShopButton } from "./NavbarActionItem";
 
 const NavBarAction = () => {
   return (
@@ -8,7 +8,7 @@ const NavBarAction = () => {
       <AvatarGroup>
         <ShopButton />
         <LoveButton />
-        <NavBarAction />
+        <LoginButton />
         <ColorModeSwitch />
       </AvatarGroup>
     </Center>

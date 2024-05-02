@@ -40,14 +40,14 @@ const ProductCard = ({
   return (
     <Card boxShadow="base">
       <CardHeader p={5}>
-        <Image w="100%" h="300px" objectFit="contain" src={image}></Image>
+        <Image w="100%" h="250px" objectFit="contain" src={image}></Image>
       </CardHeader>
       <CardBody bg="SecondColor">
-        <Text textStyle="TitrColorFul" mb={4} lineHeight={1.5} minH={20}>
-          <TextSummarizer text={title} maxChars={30} />
+        <Text textStyle="TitrColorFul" mb={4} lineHeight={1.5}>
+          <TextSummarizer text={title} maxChars={20} />
         </Text>
         <Text minH={18}>
-          <TextSummarizer text={description} maxChars={100} />
+          <TextSummarizer text={description} maxChars={80} />
         </Text>
         <Text textAlign="right" textStyle="Price">
           ${price}
