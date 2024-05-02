@@ -1,30 +1,29 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import useProducts from "./UseGetProduct";
-import ProductCard from "./ProductCard";
-import ProductCardSkeletons from "./ProductCardSkeletons";
-import useLoveProduct from "./useLoveProduct";
+import ProductCard from "../../component/Product/ProductCard";
+import ProductCardSkeletons from "../../component/Product/ProductCardSkeletons";
+import useLoveProduct from "../../hooks/useLoveProduct";
 
 const Product = () => {
   const { data, error, isLoading } = useProducts();
   const { QuantityLove, LoveID } = useLoveProduct();
 
   // add Attribute
-  //set the default to 0
 
+  //set the default to 0
   data?.map((index) => {
     if (index.LoveQuantity == null) {
       index.LoveQuantity = 0;
     }
   });
 
+  //set Value
   data?.map((i) => {
     if (i.id === LoveID) {
       i.LoveQuantity = QuantityLove;
     }
   });
 
-  console.log(LoveID);
-  console.log(data);
 
   // skeletons
   const Skeletons = [1, 2, 3, 4, 5, 6, 7, 8];

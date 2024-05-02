@@ -16,7 +16,7 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 import { TextSummarizer } from "../../services/TextSummarizer";
-import useLoveProduct from "./useLoveProduct";
+import useLoveProduct from "../../hooks/useLoveProduct";
 
 interface ProductsCardProps {
   id: number;
