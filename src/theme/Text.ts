@@ -47,15 +47,21 @@ export const textStyles = {
     borderRadius: "5px",
     borderLeft: "3px solid #7d99b5",
   },
-  Price :{
+  Price: {
     fontSize: ["20px", "24px"],
-    color:"red",
+    color: "red",
     fontWeight: "semibold",
     margin: "10px 0",
   },
-  Icon:{
+  Icon: {
     fontSize: ["24px", "28px"],
     fontWeight: "semibold",
-  }
-  
+  },
+  AvatarBadge: {
+    boxSize:"1.25em",
+    bg:"red.400",
+    color:"white",
+    p:"10px",
+    fontSize:"20px"
+  },
 };
