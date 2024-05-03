@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa";
 import { TextSummarizer } from "../../services/TextSummarizer";
 import useLoveProduct from "../../hooks/useLoveProduct";
+import { formatCurrency } from "../../services/formatCurrency";
 
 interface ProductsCardProps {
   id: number;
@@ -50,7 +51,7 @@ const ProductCard = ({
           <TextSummarizer text={description} maxChars={80} />
         </Text>
         <Text textAlign="right" textStyle="Price">
-          ${price}
+          {formatCurrency(price)}
         </Text>
         <Flex align="center" justifyContent="center">
           <Box>

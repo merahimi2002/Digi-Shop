@@ -2,6 +2,7 @@ import { Box, Button, Flex, Icon, Image, Text } from "@chakra-ui/react";
 import useLoveProduct from "../../hooks/useLoveProduct";
 import { TextSummarizer } from "../../services/TextSummarizer";
 import { IoMdClose } from "react-icons/io";
+import { formatCurrency } from "../../services/formatCurrency";
 
 interface ProductCartProps {
   id: number;
@@ -21,7 +22,7 @@ export const ProductCart = ({ image, title, price, id }: ProductCartProps) => {
           <TextSummarizer text={title} maxChars={15} />
         </Text>
         <Text textStyle="Price" fontSize="20px">
-          ${price}
+          {formatCurrency(price)}
         </Text>
       </Box>
       <Button color="red.500" background="none" onClick={() => decrease(id)}>
