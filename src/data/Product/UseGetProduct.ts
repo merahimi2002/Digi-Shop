@@ -14,8 +14,11 @@ interface ProductsProps {
 }
 
 const useProductList = () => {
+  const str = "?limit=5";
   const fetchProducts = () =>
-    axios.get<ProductsProps[]>(BaseUrl("products")).then((res) => res.data);
+    axios
+      .get<ProductsProps[]>(BaseUrl("products", str))
+      .then((res) => res.data);
   return useQuery<ProductsProps[], Error>({
     queryKey: ["Products"],
     queryFn: fetchProducts,
