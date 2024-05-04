@@ -35,7 +35,7 @@ export const ShopButton = () => {
 
 export const LoveButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const data = ProductAddItem();
+  const { data } = ProductAddItem();
 
   let SumLoveQuantity = 0;
   data?.map((i) => {

@@ -2,7 +2,8 @@ import useProductsList from "./UseGetProduct";
 import useLoveProduct from "../../hooks/useLoveProduct";
 
 const ProductAddItem = () => {
-  const { data } = useProductsList();
+  const VarUrl = "?limit=" + 5;
+  const { data, error, isLoading } = useProductsList(VarUrl);
   const { QuantityLove, LoveID } = useLoveProduct();
 
   //set the default to 0
@@ -19,7 +20,7 @@ const ProductAddItem = () => {
     }
   });
 
-  return data;
+  return { data, error, isLoading };
 };
 
 export default ProductAddItem;

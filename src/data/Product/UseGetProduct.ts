@@ -13,11 +13,10 @@ interface ProductsProps {
   LoveQuantity: number;
 }
 
-const useProductList = () => {
-  const str = "?limit=5";
+const useProductList = (VarUrl: string) => {
   const fetchProducts = () =>
     axios
-      .get<ProductsProps[]>(BaseUrl("products", str))
+      .get<ProductsProps[]>(BaseUrl("products", VarUrl))
       .then((res) => res.data);
   return useQuery<ProductsProps[], Error>({
     queryKey: ["Products"],

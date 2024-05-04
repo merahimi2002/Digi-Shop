@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Button, Grid, GridItem } from "@chakra-ui/react";
-import useProductsList from "../../data/Product/UseGetProduct";
 import ProductAddItem from "../../data/Product/ProductAddItem";
 import ProductCardSkeletons from "./ProductCardSkeletons";
 import ProductCard from "./ProductCard";
 
 const Product = () => {
   //Product
-  const { error, isLoading } = useProductsList();
-  const data = ProductAddItem();
+  const { data, error, isLoading } = ProductAddItem();
 
   //Product skeletons
   const Skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -53,7 +51,6 @@ const Product = () => {
             {pro}
           </Button>
         ))}
-
       </GridItem>
       <GridItem colSpan={4}>
         <Grid templateColumns="repeat(12, 1fr)" gap={8} p={5}>
