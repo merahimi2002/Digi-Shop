@@ -1,8 +1,8 @@
 import useProductsList from "./UseGetProduct";
 import useLoveProduct from "../../hooks/useLoveProduct";
 
-const ProductAddItem = () => {
-  const VarUrl = "?limit=" + 5;
+const ProductAddItem = (LimitNumber?: number) => {
+  const VarUrl = "?limit=" + LimitNumber;
   const { data, error, isLoading } = useProductsList(VarUrl);
   const { QuantityLove, LoveID } = useLoveProduct();
 
