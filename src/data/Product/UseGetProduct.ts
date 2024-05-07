@@ -18,10 +18,15 @@ const useProductList = (VarUrl: string) => {
     axios
       .get<ProductsProps[]>(BaseUrl("products", VarUrl))
       .then((res) => res.data);
-  return useQuery<ProductsProps[], Error>({
+  const {
+    data: Product,
+    isLoading: ProductLoading,
+    error: ProductError,
+  } = useQuery<ProductsProps[], Error>({
     queryKey: ["Products"],
     queryFn: fetchProducts,
   });
+  return { Product, ProductLoading, ProductError };
 };
 
 export default useProductList;

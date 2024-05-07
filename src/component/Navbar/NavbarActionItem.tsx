@@ -35,10 +35,10 @@ export const ShopButton = () => {
 
 export const LoveButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { data } = ProductAddItem();
+  const { Product } = ProductAddItem();
 
   let SumLoveQuantity = 0;
-  data?.map((i) => {
+  Product?.map((i) => {
     SumLoveQuantity = SumLoveQuantity + i.LoveQuantity;
   });
 
@@ -62,7 +62,7 @@ export const LoveButton = () => {
           <DrawerCloseButton />
           <DrawerHeader>Favorite Cart</DrawerHeader>
           <DrawerBody>
-            {data?.map((pro) =>
+            {Product?.map((pro) =>
               pro.LoveQuantity > 0 ? (
                 <ProductCart
                   id={pro.id}

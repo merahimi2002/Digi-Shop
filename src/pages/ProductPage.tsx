@@ -1,5 +1,5 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import Product from "../component/Product/Product";
+import Category from "../component/Product/Category";
 
 const ProductPage = () => {
   return (
@@ -10,7 +10,7 @@ const ProductPage = () => {
       gap={5}
     >
       <GridItem colSpan={1}>
-        <Product />
+        <Category />
       </GridItem>
     </Grid>
   );

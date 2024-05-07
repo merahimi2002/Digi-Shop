@@ -3,24 +3,24 @@ import useLoveProduct from "../../hooks/useLoveProduct";
 
 const ProductAddItem = (LimitNumber?: number) => {
   const VarUrl = "?limit=" + LimitNumber;
-  const { data, error, isLoading } = useProductsList(VarUrl);
+  const { Product, ProductError, ProductLoading } = useProductsList(VarUrl);
   const { QuantityLove, LoveID } = useLoveProduct();
 
   //set the default to 0
-  data?.map((index) => {
+  Product?.map((index) => {
     if (index.LoveQuantity == null) {
       index.LoveQuantity = 0;
     }
   });
 
   //set Value
-  data?.map((i) => {
+  Product?.map((i) => {
     if (i.id === LoveID) {
       i.LoveQuantity = QuantityLove;
     }
   });
 
-  return { data, error, isLoading };
+  return { Product, ProductError, ProductLoading };
 };
 
 export default ProductAddItem;
