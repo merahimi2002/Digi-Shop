@@ -1,7 +1,7 @@
 import { useGetCategoryItem } from "./UseGetCategory";
 import useLoveProduct from "../../hooks/useLoveProduct";
 
-const CategoryProductAddItem = (Category: string) => {
+const CategoryAddItem = (Category: string) => {
   const { CategoriesItem, CategoriesItemError, CategoriesItemLoading } =
     useGetCategoryItem(Category);
   const { QuantityLove, LoveID } = useLoveProduct();
@@ -23,4 +23,4 @@ const CategoryProductAddItem = (Category: string) => {
   return { CategoriesItem, CategoriesItemError, CategoriesItemLoading };
 };
 
-export default CategoryProductAddItem;
+export default CategoryAddItem;
