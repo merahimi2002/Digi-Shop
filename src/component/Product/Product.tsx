@@ -29,18 +29,23 @@ const Product = () => {
 
   //Product Error
   if (ProductError) return <h1>{ProductError.message}</h1>;
-  return Product?.map((pro) => (
-    <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }}>
-      <ProductCard
-        id={pro.id}
-        title={pro.title}
-        price={pro.price}
-        description={pro.description}
-        image={pro.image}
-        LoveQuantity={pro.LoveQuantity}
-      />
-    </GridItem>
-  ));
+  return (
+    <Grid templateColumns="repeat(12, 1fr)" gap={8} p={5}>
+      {Product?.map((pro) => (
+        <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }}>
+          <ProductCard
+            id={pro.id}
+            title={pro.title}
+            price={pro.price}
+            description={pro.description}
+            image={pro.image}
+            LoveQuantity={pro.LoveQuantity}
+          />
+        </GridItem>
+      ))}
+      ;
+    </Grid>
+  );
 };
 
 export default Product;

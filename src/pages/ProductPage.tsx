@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { Grid, GridItem } from "@chakra-ui/react";
 import Category from "../component/Product/Category";
-
+import Product from "../component/Product/Product";
 
 const ProductPage = () => {
+  console.log(window.location.pathname);
   return (
     <Grid
       templateColumns="repeat(5, 1fr)"
@@ -15,6 +16,7 @@ const ProductPage = () => {
         <Category />
       </GridItem>
       <GridItem colSpan={4}>
+        {window.location.pathname == "/Digi-Shop/product" ? <Product /> : null}
         <Outlet />
       </GridItem>
     </Grid>

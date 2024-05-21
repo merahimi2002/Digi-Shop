@@ -3,8 +3,7 @@ import { Grid, GridItem, Image } from "@chakra-ui/react";
 import CategoryAddItem from "../../data/Product/CategoryAddItem";
 import ProductCardSkeletons from "./ProductCardSkeletons";
 import ProductCard from "./ProductCard";
-import Error from "../../../public/image/404.png"
-
+import Error from "../../../public/image/404.png";
 
 const CategoriyItem = () => {
   const params = useParams();
@@ -23,17 +22,12 @@ const CategoriyItem = () => {
   //Category item Loading
   if (CategoriesItemLoading)
     return (
-      <Grid templateColumns="repeat(5, 1fr)" gap={5}>
-        <GridItem colSpan={1}></GridItem>
-        <GridItem colSpan={4}>
-          <Grid templateColumns="repeat(12, 1fr)" gap={5} p={5}>
-            {Skeletons.map((pro) => (
-              <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }}>
-                <ProductCardSkeletons key={pro} />
-              </GridItem>
-            ))}
-          </Grid>
-        </GridItem>
+      <Grid templateColumns="repeat(12, 1fr)" gap={5} p={5}>
+        {Skeletons.map((pro) => (
+          <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }}>
+            <ProductCardSkeletons key={pro} />
+          </GridItem>
+        ))}
       </Grid>
     );
 
@@ -46,23 +40,19 @@ const CategoriyItem = () => {
   }
 
   return (
-    <Grid templateColumns="repeat(1, 1fr)" gap={5}>
-      <GridItem colSpan={1}>
-        <Grid templateColumns="repeat(12, 1fr)" gap={8} p={5}>
-          {CategoriesItem?.map((pro) => (
-            <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }}>
-              <ProductCard
-                id={pro.id}
-                title={pro.title}
-                price={pro.price}
-                description={pro.description}
-                image={pro.image}
-                LoveQuantity={pro.LoveQuantity}
-              />
-            </GridItem>
-          ))}
-        </Grid>
-      </GridItem>
+    <Grid templateColumns="repeat(12, 1fr)" gap={8} p={5}>
+      {CategoriesItem?.map((pro) => (
+        <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }}>
+          <ProductCard
+            id={pro.id}
+            title={pro.title}
+            price={pro.price}
+            description={pro.description}
+            image={pro.image}
+            LoveQuantity={pro.LoveQuantity}
+          />
+        </GridItem>
+      ))}
     </Grid>
   );
 };
