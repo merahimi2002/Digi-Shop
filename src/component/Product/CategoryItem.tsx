@@ -1,9 +1,9 @@
-import { Grid, GridItem } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import { Grid, GridItem, Image } from "@chakra-ui/react";
 import CategoryAddItem from "../../data/Product/CategoryAddItem";
 import ProductCardSkeletons from "./ProductCardSkeletons";
-import Product from "./Product";
 import ProductCard from "./ProductCard";
+import Error from "../../../public/image/404.png"
 
 
 const CategoriyItem = () => {
@@ -40,6 +40,10 @@ const CategoriyItem = () => {
   //Categories Error
   if (CategoriesItemError) return <h1>Error CategoriesItem</h1>;
 
+  // valid url
+  if (CategoriesItem?.length == 0) {
+    return <Image src={Error} />;
+  }
 
   return (
     <Grid templateColumns="repeat(1, 1fr)" gap={5}>
