@@ -4,7 +4,6 @@ import Category from "../component/Product/Category";
 import Product from "../component/Product/Product";
 
 const ProductPage = () => {
-  console.log(window.location.pathname);
   return (
     <Grid
       templateColumns="repeat(5, 1fr)"

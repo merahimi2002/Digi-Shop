@@ -7,6 +7,7 @@ import { RouterProvider } from "react-router-dom";
 import { SwitchTheme } from "./theme/ColorModeSwitch.tsx";
 import CustomizeTheme from "./theme/index.ts";
 import router from "./route/rouates.tsx";
+import "./assets/Global.css"
 
 const queryClient = new QueryClient();
 
