@@ -15,8 +15,8 @@ const Product = () => {
     return (
       <Grid templateColumns="repeat(12, 1fr)" gap={5} p={5}>
         {Skeletons.map((pro) => (
-          <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }}>
-            <ProductCardSkeletons key={pro} />
+          <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }} key={pro}>
+            <ProductCardSkeletons  />
           </GridItem>
         ))}
       </Grid>
@@ -27,7 +27,7 @@ const Product = () => {
   return (
     <Grid templateColumns="repeat(12, 1fr)" gap={8} p={5}>
       {Product?.map((pro) => (
-        <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }}>
+        <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }} key={pro.id}>
           <ProductCard
             id={pro.id}
             title={pro.title}

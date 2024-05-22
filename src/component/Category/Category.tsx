@@ -36,6 +36,7 @@ const Category = () => {
             color="FirstColor"
             border="2px solid FirstColor"
             boxShadow="base"
+            key={pro}
           >
             <Link to={`${pro}`} className="a-link">{pro}</Link>
           </Button>

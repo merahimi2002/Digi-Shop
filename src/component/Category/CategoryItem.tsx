@@ -42,7 +42,7 @@ const CategoriyItem = () => {
   return (
     <Grid templateColumns="repeat(12, 1fr)" gap={8} p={5}>
       {CategoriesItem?.map((pro) => (
-        <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }}>
+        <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }} key={pro.id}>
           <ProductCard
             id={pro.id}
             title={pro.title}
