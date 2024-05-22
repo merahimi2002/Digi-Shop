@@ -1,4 +1,4 @@
-import { useGetCategoryItem } from "./UseGetCategory";
+import { useGetCategoryItem } from "../Category/UseGetCategory";
 import useLoveProduct from "../../hooks/useLoveProduct";
 
 const CategoryAddItem = (Category: string) => {
