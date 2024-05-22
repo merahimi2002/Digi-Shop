@@ -5,7 +5,7 @@ import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import ErrorPage from "./ErrorPage";
 import ProductPage from "../pages/ProductPage";
-import CategoriyItem from "../component/Product/CategoryItem";
+import CategoriyItem from "../component/Category/CategoryItem";
 
 const router = createBrowserRouter([
   {

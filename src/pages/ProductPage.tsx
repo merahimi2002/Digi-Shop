@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Grid, GridItem } from "@chakra-ui/react";
-import Category from "../component/Product/Category";
+import Category from "../component/Category/Category";
 import Product from "../component/Product/Product";
 
 const ProductPage = () => {
