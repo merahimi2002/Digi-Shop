@@ -18,7 +18,7 @@ import {
   MdHighQuality,
   MdPayments,
 } from "react-icons/md";
-import Picture from "../../public/image/About.jpg";
+import Picture from "../../public/image/Sidepage/About.jpg";
 
 const AboutUs = () => {
   const SpecialTitrDM = useColorModeValue("#edf2f754", "#edf2f71f");
@@ -26,12 +26,12 @@ const AboutUs = () => {
     <Fragment>
       <Grid
         templateColumns="repeat(12, 1fr)"
-        mt="130px"
+        mt="160px"
         gap={5}
         p={{ base: "10px", md: "10px 80px" }}
       >
         <GridItem colSpan={{ base: 12, md: 8, xl: 5 }}>
-          <Image boxShadow="dark-lg" borderRadius={4} src={Picture}></Image>
+          <Image boxShadow="base" borderRadius={4} src={Picture}></Image>
         </GridItem>
         <GridItem
           pl={{ base: "10px", md: "40px" }}
