@@ -1,10 +1,5 @@
-import {
-  Button,
-  extendTheme,
-  HStack,
-  ThemeConfig,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Button, extendTheme, HStack } from "@chakra-ui/react";
+import { ThemeConfig, useColorMode } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const config: ThemeConfig = {

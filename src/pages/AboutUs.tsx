@@ -1,23 +1,10 @@
 import { Fragment } from "react/jsx-runtime";
-import {
-  Center,
-  Grid,
-  GridItem,
-  Icon,
-  Image,
-  List,
-  ListIcon,
-  ListItem,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Center, Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
+import { Icon, Image, List, ListIcon, ListItem, Text } from "@chakra-ui/react";
 import { FaCheckCircle, FaBusinessTime } from "react-icons/fa";
 import { RiCustomerService2Line } from "react-icons/ri";
-import {
-  MdMiscellaneousServices,
-  MdHighQuality,
-  MdPayments,
-} from "react-icons/md";
+import { MdHighQuality, MdPayments } from "react-icons/md";
+import { MdMiscellaneousServices } from "react-icons/md";
 import Picture from "../../public/image/Sidepage/About.jpg";
 
 const AboutUs = () => {
