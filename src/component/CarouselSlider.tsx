@@ -16,7 +16,13 @@ const CarouselSlider = ({ Slider, Count }: Props) => {
     <Fragment>
       <Carousel autoPlay={true} interval={5000} loop={true}>
         {Counter.map((item, i) => (
-          <Image draggable="false" key={i} src={Slider[i]}></Image>
+          <Image
+            m="auto"
+            pb="20px"
+            draggable="false"
+            key={i}
+            src={Slider[i]}
+          ></Image>
         ))}
       </Carousel>
     </Fragment>

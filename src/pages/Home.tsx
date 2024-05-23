@@ -1,19 +1,23 @@
 import { Fragment } from "react/jsx-runtime";
 import { Button, Grid, GridItem, Icon, Image, Text } from "@chakra-ui/react";
-import { List, ListIcon, ListItem } from "@chakra-ui/react";
+import { List, ListIcon, ListItem, Center } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import CarouselSlider from "../component/CarouselSlider";
-import Slider01 from "../../public/image/Slider/Slider01.jpg";
-import Slider02 from "../../public/image/Slider/Slider02.jpg";
-import Slider03 from "../../public/image/Slider/Slider03.jpg";
+import Slider01 from "../../public/image/Slider/Slider01.png";
+import Slider02 from "../../public/image/Slider/Slider02.png";
+import Slider03 from "../../public/image/Slider/Slider03.png";
 import Picture from "../../public/image/Sidepage/About.jpg";
-import { Link, Navigate } from "react-router-dom";
 
 const Home = () => {
   return (
     <Fragment>
-      <CarouselSlider Count={3} Slider={[Slider01, Slider02, Slider03]} />
+      <Center mt="100px" pb="30px" bgGradient="linear(to-b, #f2f6f9, #008080)">
+        <CarouselSlider
+          Count={3}
+          Slider={[Slider01, Slider02, Slider03]}
+        />
+      </Center>
       <Grid
         templateColumns="repeat(12, 1fr)"
         mt="50px"
