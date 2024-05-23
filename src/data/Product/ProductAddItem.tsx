@@ -1,5 +1,5 @@
 import useProductsList from "./UseGetProduct";
-import useLoveProduct from "./AddLoveQuantity";
+import useLoveProduct from "../services/AddLoveQuantity";
 
 const ProductAddItem = (LimitNumber?: number) => {
   const VarUrl = "?limit=" + LimitNumber;

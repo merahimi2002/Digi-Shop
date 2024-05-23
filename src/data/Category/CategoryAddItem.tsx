@@ -1,5 +1,5 @@
 import { useGetCategoryItem } from "../Category/UseGetCategory";
-import useLoveProduct from "../Product/AddLoveQuantity";
+import useLoveProduct from "../services/AddLoveQuantity";
 
 const CategoryAddItem = (Category: string) => {
   const { CategoriesItem, CategoriesItemError, CategoriesItemLoading } =
