@@ -15,6 +15,13 @@ export const textStyles = {
     fontSize: ["14px", "16px"],
     lineHeight: "160%",
   },
+  ErrorElement: {
+    fontSize: ["36px", "48px"],
+    fontWeight: "semibold",
+    lineHeight: "110%",
+    color: "red",
+    margin:"10px",
+  },
   Titr: {
     fontSize: ["1.25rem", "1.75rem"],
     fontWeight: "semibold",
@@ -58,10 +65,10 @@ export const textStyles = {
     fontWeight: "semibold",
   },
   AvatarBadge: {
-    boxSize:"1.25em",
-    bg:"red.400",
-    color:"white",
-    p:"10px",
-    fontSize:"20px"
+    boxSize: "1.25em",
+    bg: "red.400",
+    color: "white",
+    p: "10px",
+    fontSize: "20px",
   },
 };

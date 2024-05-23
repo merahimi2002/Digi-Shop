@@ -1,4 +1,4 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Text } from "@chakra-ui/react";
 import ProductAddItem from "../../data/Product/ProductAddItem";
 import ProductCardSkeletons from "./ProductCardSkeletons";
 import ProductCard from "./ProductCard";
@@ -16,14 +16,16 @@ const Product = () => {
       <Grid templateColumns="repeat(12, 1fr)" gap={5} p={5}>
         {Skeletons.map((pro) => (
           <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }} key={pro}>
-            <ProductCardSkeletons  />
+            <ProductCardSkeletons />
           </GridItem>
         ))}
       </Grid>
     );
 
   //Product Error
-  if (ProductError) return <h1>{ProductError.message}</h1>;
+  if (ProductError)
+    return <Text textStyle="ErrorElement">{ProductError.message}</Text>;
+
   return (
     <Grid templateColumns="repeat(12, 1fr)" gap={8} p={5}>
       {Product?.map((pro) => (

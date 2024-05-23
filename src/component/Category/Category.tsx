@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button, Grid, GridItem, Spinner } from "@chakra-ui/react";
+import { Button, Grid, GridItem, Spinner, Text } from "@chakra-ui/react";
 import { useGetCategory } from "../../data/Category/UseGetCategory";
 
 const Category = () => {
@@ -19,7 +19,8 @@ const Category = () => {
     );
 
   //Categories Error
-  if (CategoriesError) return <h1>{CategoriesError.message}</h1>;
+  if (CategoriesError)
+    return <Text textStyle="ErrorElement">{CategoriesError.message}</Text>;
 
   return (
     <Grid templateColumns="repeat(1, 1fr)" gap={5}>
@@ -38,7 +39,9 @@ const Category = () => {
             boxShadow="base"
             key={pro}
           >
-            <Link to={`${pro}`} className="a-link">{pro}</Link>
+            <Link to={`${pro}`} className="a-link">
+              {pro}
+            </Link>
           </Button>
         ))}
       </GridItem>

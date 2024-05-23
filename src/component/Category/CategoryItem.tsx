@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Grid, GridItem, Image } from "@chakra-ui/react";
+import { Grid, GridItem, Image, Text } from "@chakra-ui/react";
 import CategoryAddItem from "../../data/Category/CategoryAddItem";
 import ProductCardSkeletons from "../Product/ProductCardSkeletons";
 import ProductCard from "../Product/ProductCard";
@@ -25,14 +25,15 @@ const CategoriyItem = () => {
       <Grid templateColumns="repeat(12, 1fr)" gap={5} p={5}>
         {Skeletons.map((pro) => (
           <GridItem colSpan={{ base: 12, md: 12, lg: 6, "2xl": 4 }} key={pro}>
-            <ProductCardSkeletons  />
+            <ProductCardSkeletons />
           </GridItem>
         ))}
       </Grid>
     );
 
   //Categories Error
-  if (CategoriesItemError) return <h1>{CategoriesItemError.message}</h1>;
+  if (CategoriesItemError)
+    return <Text textStyle="ErrorElement">{CategoriesItemError.message}</Text>;
 
   // valid url
   if (CategoriesItem?.length == 0) {
