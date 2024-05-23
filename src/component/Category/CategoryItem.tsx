@@ -32,7 +32,7 @@ const CategoriyItem = () => {
     );
 
   //Categories Error
-  if (CategoriesItemError) return <h1>Error CategoriesItem</h1>;
+  if (CategoriesItemError) return <h1>{CategoriesItemError.message}</h1>;
 
   // valid url
   if (CategoriesItem?.length == 0) {

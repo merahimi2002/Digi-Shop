@@ -15,12 +15,12 @@ interface CategoryItemProps {
 
 export const useGetCategory = () => {
   const fetchCategory = () =>
-    axios.get(BaseUrl("products/categories", "")).then((res) => res.data);
+    axios.get<[]>(BaseUrl("products/categories", "")).then((res) => res.data);
   const {
     data: Categories,
     isLoading: CategoriesLoading,
     error: CategoriesError,
-  } = useQuery({
+  } = useQuery<[],Error>({
     queryKey: ["Category"],
     queryFn: fetchCategory,
   });

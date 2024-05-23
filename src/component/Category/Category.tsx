@@ -19,7 +19,7 @@ const Category = () => {
     );
 
   //Categories Error
-  if (CategoriesError) return <h1>Error Category</h1>;
+  if (CategoriesError) return <h1>{CategoriesError.message}</h1>;
 
   return (
     <Grid templateColumns="repeat(1, 1fr)" gap={5}>
