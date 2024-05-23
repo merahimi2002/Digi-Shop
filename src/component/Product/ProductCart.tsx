@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Icon, Image, Text } from "@chakra-ui/react";
-import useLoveProduct from "../../data/Product/useLoveProduct";
+import useLoveProduct from "../../data/Product/AddLoveQuantity";
 import { TextSummarizer } from "../../services/TextSummarizer";
 import { IoMdClose } from "react-icons/io";
 import { formatCurrency } from "../../services/formatCurrency";

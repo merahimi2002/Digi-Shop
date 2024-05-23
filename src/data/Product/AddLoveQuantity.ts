@@ -7,7 +7,7 @@ interface LoveStore {
   decrease: (id: number) => void;
 }
 
-const useLoveProduct = create<LoveStore>((set) => ({
+const AddLoveQuantity = create<LoveStore>((set) => ({
   LoveID: 0,
   QuantityLove: 0,
   increase: (id) =>
@@ -22,4 +22,4 @@ const useLoveProduct = create<LoveStore>((set) => ({
     })),
 }));
 
-export default useLoveProduct;
+export default AddLoveQuantity;

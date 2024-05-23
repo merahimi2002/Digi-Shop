@@ -1,5 +1,5 @@
 import useProductsList from "./UseGetProduct";
-import useLoveProduct from "./useLoveProduct";
+import useLoveProduct from "./AddLoveQuantity";
 
 const ProductAddItem = (LimitNumber?: number) => {
   const VarUrl = "?limit=" + LimitNumber;
@@ -12,6 +12,7 @@ const ProductAddItem = (LimitNumber?: number) => {
       index.LoveQuantity = 0;
     }
   });
+  
 
   //set Value
   Product?.map((i) => {
