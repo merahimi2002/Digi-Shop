@@ -20,7 +20,7 @@ export const textStyles = {
     fontWeight: "semibold",
     lineHeight: "110%",
     color: "red",
-    margin:"10px",
+    margin: "10px",
   },
   Titr: {
     fontSize: ["1.25rem", "1.75rem"],
@@ -70,5 +70,13 @@ export const textStyles = {
     color: "white",
     p: "10px",
     fontSize: "20px",
+  },
+  ContactIcon: {
+    fontSize: "40px",
+    border: "3px solid",
+    borderRadius: "50%",
+    p: "15px",
+    width: "70px",
+    height: "70px",
   },
 };
