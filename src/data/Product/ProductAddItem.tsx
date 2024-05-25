@@ -1,5 +1,5 @@
 import useProductsList from "./UseGetProduct";
-import useLoveProduct from "./AddLoveQuantity";
+import useLoveProduct from "../Services/AddLoveQuantity";
 
 const ProductAddItem = (LimitNumber?: number) => {
   const VarUrl = "?limit=" + LimitNumber;
@@ -20,10 +20,8 @@ const ProductAddItem = (LimitNumber?: number) => {
     }
   });
 
-  //Save in local storage
+  //Save in local storage set love quantity valu
   localStorage.setItem(LoveID.toString(), QuantityLove.toString());
-
-  // set love quantity valu from local storage
   Product?.map((i) => {
     if(localStorage.getItem(i.id.toString())!== null){
       i.LoveQuantity = Number(localStorage.getItem(i.id.toString()))

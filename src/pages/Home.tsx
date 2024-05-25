@@ -41,13 +41,6 @@ const Home = () => {
             diverse range of digital goods to meet a variety of needs and
             interests.
           </Text>
-          <Text textStyle="p">
-            At Digi Shop, you'll find an extensive selection of digital products
-            and services carefully curated to cater to diverse preferences and
-            requirements. Whether you're seeking cutting-edge software,
-            captivating e-books, captivating music and videos, stunning
-            graphics, or enriching online courses, we've got you covered.
-          </Text>
           <List spacing={3} my={5} fontWeight="500">
             <ListItem>
               <ListIcon
