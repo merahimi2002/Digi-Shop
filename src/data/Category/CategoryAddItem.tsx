@@ -6,10 +6,11 @@ const CategoryAddItem = (Category: string) => {
     useGetCategoryItem(Category);
   const { QuantityLove, LoveID } = useLoveProduct();
 
-  //set love quantity default to 0
+  //set love quantity & Product Quantity default to 0
   CategoriesItem?.map((index) => {
     if (index.LoveQuantity == null) {
       index.LoveQuantity = 0;
+      index.ProductQuantity = 0;
     }
   });
 
@@ -20,15 +21,13 @@ const CategoryAddItem = (Category: string) => {
     }
   });
 
-   //Save in local storage
-   localStorage.setItem(LoveID.toString(), QuantityLove.toString());
-
-   // set love quantity valu from local storage
-   CategoriesItem?.map((i) => {
-     if(localStorage.getItem(i.id.toString())!== null){
-       i.LoveQuantity = Number(localStorage.getItem(i.id.toString()))
-     }
-   });
+  //Save in local storage set love quantity valu
+  localStorage.setItem(LoveID.toString(), QuantityLove.toString());
+  CategoriesItem?.map((i) => {
+    if (localStorage.getItem(i.id.toString()) !== null) {
+      i.LoveQuantity = Number(localStorage.getItem(i.id.toString()));
+    }
+  });
 
   return { CategoriesItem, CategoriesItemError, CategoriesItemLoading };
 };

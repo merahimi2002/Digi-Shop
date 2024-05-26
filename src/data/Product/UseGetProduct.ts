@@ -11,6 +11,7 @@ interface ProductsProps {
   image: string;
   // add Attribute
   LoveQuantity: number;
+  ProductQuantity: number;
 }
 
 const useProductList = (VarUrl: string) => {

@@ -11,6 +11,7 @@ interface CategoryItemProps {
   image: string;
   // add Attribute
   LoveQuantity: number;
+  ProductQuantity: number;
 }
 
 export const useGetCategory = () => {
