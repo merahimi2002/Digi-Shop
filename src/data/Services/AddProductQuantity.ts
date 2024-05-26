@@ -3,29 +3,31 @@ import { create } from "zustand";
 interface ProductStore {
   ProductName: string;
   ProductQuantity: number;
-  increase: (Name: string) => void;
-  decrease: (Name: string) => void;
-  delete: (Name: string) => void;
+  increaseProductQuantity: (Name: string) => void;
+  decreaseProductQuantity: (Name: string) => void;
+  deleteProductQuantity: (Name: string) => void;
 }
 
 const AddProductQuantity = create<ProductStore>((set) => ({
   ProductName: "",
   ProductQuantity: 0,
-  increase: (Name) =>
+  increaseProductQuantity: (Name) =>
     set((store) => ({
       ProductName: Name,
       ProductQuantity: store.ProductQuantity + 1,
     })),
-  decrease: (Name) =>
+  decreaseProductQuantity: (Name) =>
     set((store) => ({
       ProductName: Name,
       ProductQuantity: store.ProductQuantity - 1,
     })),
-  delete: (Name) =>
+  deleteProductQuantity: (Name) =>
     set(() => ({
       ProductName: Name,
       ProductQuantity: 0,
     })),
 }));
+
+
 
 export default AddProductQuantity;

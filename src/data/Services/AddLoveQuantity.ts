@@ -3,19 +3,19 @@ import { create } from "zustand";
 interface LoveStore {
   LoveID: number;
   QuantityLove: number;
-  increase: (id: number) => void;
-  decrease: (id: number) => void;
+  increaseLoveQuantity: (id: number) => void;
+  decreaseLoveQuantity: (id: number) => void;
 }
 
 const AddLoveQuantity = create<LoveStore>((set) => ({
   LoveID: 0,
   QuantityLove: 0,
-  increase: (id) =>
+  increaseLoveQuantity: (id) =>
     set(() => ({
       LoveID: id,
       QuantityLove: 1,
     })),
-  decrease: (id) =>
+  decreaseLoveQuantity: (id) =>
     set(() => ({
       LoveID: id,
       QuantityLove: 0,

@@ -51,6 +51,7 @@ const CategoriyItem = () => {
             description={pro.description}
             image={pro.image}
             LoveQuantity={pro.LoveQuantity}
+            ProductQuantity={pro.ProductQuantity}
           />
         </GridItem>
       ))}

@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Icon, Image, Text } from "@chakra-ui/react";
-import useLoveProduct from "../../data/Services/AddLoveQuantity";
+import AddLoveQuantity from "../../data/Services/AddLoveQuantity";
 import { TextSummarizer } from "../../services/TextSummarizer";
 import { IoMdClose } from "react-icons/io";
 import { formatCurrency } from "../../services/formatCurrency";
@@ -12,7 +12,7 @@ interface ProductCartProps {
 }
 
 export const ProductCart = ({ image, title, price, id }: ProductCartProps) => {
-  const { decrease } = useLoveProduct();
+  const { decreaseLoveQuantity } = AddLoveQuantity();
 
   return (
     <Flex p={5} my={3} boxShadow="base" justifyContent="space-around">
@@ -25,7 +25,11 @@ export const ProductCart = ({ image, title, price, id }: ProductCartProps) => {
           {formatCurrency(price)}
         </Text>
       </Box>
-      <Button color="red.500" background="none" onClick={() => decrease(id)}>
+      <Button
+        color="red.500"
+        background="none"
+        onClick={() => decreaseLoveQuantity(id)}
+      >
         <Icon fontSize="30px" as={IoMdClose}></Icon>
       </Button>
     </Flex>
