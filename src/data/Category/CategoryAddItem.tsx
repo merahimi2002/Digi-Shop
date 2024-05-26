@@ -1,12 +1,10 @@
 import { useGetCategoryItem } from "../Category/UseGetCategory";
 import AddLoveQuantity from "../Services/AddLoveQuantity";
-import AddProductQuantity from "../Services/AddProductQuantity";
 
 const CategoryAddItem = (Category: string) => {
   const { CategoriesItem, CategoriesItemError, CategoriesItemLoading } =
     useGetCategoryItem(Category);
   const { QuantityLove, LoveID } = AddLoveQuantity();
-  const { ProductQuantity, ProductName } = AddProductQuantity();
 
   //set love quantity & Product Quantity default to 0
   CategoriesItem?.map((index) => {
@@ -31,11 +29,15 @@ const CategoryAddItem = (Category: string) => {
     }
   });
 
-  // set product quantity Value
+  // set product quantity Value in local storage
   CategoriesItem?.map((i) => {
-    if (i.title === ProductName) {
-      i.ProductQuantity = ProductQuantity;
+    const DefaultProductQuantity = 0;
+    // set defualt value to zero
+    if (localStorage.getItem(i.title) === null) {
+      localStorage.setItem(i.title, DefaultProductQuantity.toString());
     }
+    // set Value
+    i.ProductQuantity = Number(localStorage.getItem(i.title));
   });
 
   return { CategoriesItem, CategoriesItemError, CategoriesItemLoading };

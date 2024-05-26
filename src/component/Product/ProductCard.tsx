@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Box, Button, Card, CardBody, CardHeader } from "@chakra-ui/react";
 import { Flex, Icon, Image, Text } from "@chakra-ui/react";
 import { FaSearchPlus, FaShoppingCart } from "react-icons/fa";
@@ -5,7 +6,8 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { TextSummarizer } from "../../services/TextSummarizer";
 import { formatCurrency } from "../../services/formatCurrency";
 import AddLoveQuantity from "../../data/Services/AddLoveQuantity";
-import AddProductQuantity from "../../data/Services/AddProductQuantity";
+import { IncreaseProductQuantity } from "../../data/Services/AddProductQuantity";
+import { DecreaseProductQuantity } from "../../data/Services/AddProductQuantity";
 
 interface ProductsCardProps {
   id: number;
@@ -27,8 +29,9 @@ const ProductCard = ({
   ProductQuantity,
 }: ProductsCardProps) => {
   const { increaseLoveQuantity, decreaseLoveQuantity } = AddLoveQuantity();
-  const { increaseProductQuantity, decreaseProductQuantity } =
-    AddProductQuantity();
+  // for rerender when updated
+  const [ProductQuantityRender, setProductQuantityRender] =
+    useState(ProductQuantity);
 
   return (
     <Card boxShadow="base">
@@ -60,10 +63,12 @@ const ProductCard = ({
                 <Icon textStyle="Icon" color="FirstColor" as={FaHeart}></Icon>
               </Button>
             )}
-            {ProductQuantity === 0 ? (
+            {ProductQuantityRender === 0 ? (
               <Button
                 variant="Shop"
-                onClick={() => increaseProductQuantity(title)}
+                onClick={() =>
+                  setProductQuantityRender(IncreaseProductQuantity(title))
+                }
               >
                 <Icon
                   textStyle="Icon"
@@ -72,19 +77,23 @@ const ProductCard = ({
                 ></Icon>
               </Button>
             ) : (
-              <Box>
+              <Box display="flex" alignItems="center">
                 <Button
                   variant="Shop"
-                  onClick={() => decreaseProductQuantity(title)}
+                  onClick={() =>
+                    setProductQuantityRender(DecreaseProductQuantity(title))
+                  }
                 >
                   <Box fontSize="28px" mt="-5px" color="red">
                     -
                   </Box>
                 </Button>
-                {ProductQuantity}
+                <Box fontSize="20px">{ProductQuantityRender}</Box>
                 <Button
                   variant="Shop"
-                  onClick={() => increaseProductQuantity(title)}
+                  onClick={() =>
+                    setProductQuantityRender(IncreaseProductQuantity(title))
+                  }
                 >
                   <Box fontSize="28px" mt="-5px" color="green">
                     +

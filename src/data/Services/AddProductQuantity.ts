@@ -1,33 +1,20 @@
-import { create } from "zustand";
-
-interface ProductStore {
-  ProductName: string;
-  ProductQuantity: number;
-  increaseProductQuantity: (Name: string) => void;
-  decreaseProductQuantity: (Name: string) => void;
-  deleteProductQuantity: (Name: string) => void;
-}
-
-const AddProductQuantity = create<ProductStore>((set) => ({
-  ProductName: "",
-  ProductQuantity: 0,
-  increaseProductQuantity: (Name) =>
-    set((store) => ({
-      ProductName: Name,
-      ProductQuantity: store.ProductQuantity + 1,
-    })),
-  decreaseProductQuantity: (Name) =>
-    set((store) => ({
-      ProductName: Name,
-      ProductQuantity: store.ProductQuantity - 1,
-    })),
-  deleteProductQuantity: (Name) =>
-    set(() => ({
-      ProductName: Name,
-      ProductQuantity: 0,
-    })),
-}));
-
-
-
-export default AddProductQuantity;
+export const IncreaseProductQuantity = (Name: string) => {
+  let localQuantity = localStorage.getItem(Name);
+  const NewlocalQuantity = Number(localQuantity) + 1;
+  localStorage.setItem(Name, NewlocalQuantity.toString());
+  // for rerender when updated
+  return NewlocalQuantity;
+};
+export const DecreaseProductQuantity = (Name: string) => {
+  let localQuantity = localStorage.getItem(Name);
+  const NewlocalQuantity = Number(localQuantity) - 1;
+  localStorage.setItem(Name, NewlocalQuantity.toString());
+  // for rerender when updated
+  return NewlocalQuantity;
+};
+export const DeleteProductQuantity = (Name: string) => {
+  const NewlocalQuantity = 0;
+  localStorage.setItem(Name, NewlocalQuantity.toString());
+  // for rerender when updated
+  return NewlocalQuantity;
+};
