@@ -5,9 +5,10 @@ import { FaSearchPlus, FaShoppingCart } from "react-icons/fa";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { TextSummarizer } from "../../services/TextSummarizer";
 import { formatCurrency } from "../../services/formatCurrency";
-import AddLoveQuantity from "../../data/Services/AddLoveQuantity";
 import { IncreaseProductQuantity } from "../../data/Services/AddProductQuantity";
 import { DecreaseProductQuantity } from "../../data/Services/AddProductQuantity";
+import { IncreaseLoveQuantity } from "../../data/Services/AddLoveQuantity";
+import { DecreaseLoveQuantity } from "../../data/Services/AddLoveQuantity";
 
 interface ProductsCardProps {
   id: number;
@@ -28,7 +29,9 @@ const ProductCard = ({
   LoveQuantity,
   ProductQuantity,
 }: ProductsCardProps) => {
-  const { increaseLoveQuantity, decreaseLoveQuantity } = AddLoveQuantity();
+  // for rerender when updated
+  const [LoveQuantityRender, setLoveQuantityRender] = useState(LoveQuantity);
+
   // for rerender when updated
   const [ProductQuantityRender, setProductQuantityRender] =
     useState(ProductQuantity);
@@ -50,8 +53,11 @@ const ProductCard = ({
         </Text>
         <Flex align="center" justifyContent="center">
           <Box display="flex">
-            {LoveQuantity === 0 ? (
-              <Button variant="Shop" onClick={() => increaseLoveQuantity(id)}>
+            {LoveQuantityRender === 0 ? (
+              <Button
+                variant="Shop"
+                onClick={() => setLoveQuantityRender(IncreaseLoveQuantity(id))}
+              >
                 <Icon
                   textStyle="Icon"
                   color="FirstColor"
@@ -59,7 +65,10 @@ const ProductCard = ({
                 ></Icon>
               </Button>
             ) : (
-              <Button variant="Shop" onClick={() => decreaseLoveQuantity(id)}>
+              <Button
+                variant="Shop"
+                onClick={() => setLoveQuantityRender(DecreaseLoveQuantity(id))}
+              >
                 <Icon textStyle="Icon" color="FirstColor" as={FaHeart}></Icon>
               </Button>
             )}

@@ -1,10 +1,8 @@
 import useProductsList from "./UseGetProduct";
-import AddLoveQuantity from "../Services/AddLoveQuantity";
 
 const ProductAddItem = (LimitNumber?: number) => {
   const VarUrl = "?limit=" + LimitNumber;
   const { Product, ProductError, ProductLoading } = useProductsList(VarUrl);
-  const { QuantityLove, LoveID } = AddLoveQuantity();
 
   //set love quantity & Product Quantity default to 0
   Product?.map((index) => {
@@ -14,19 +12,15 @@ const ProductAddItem = (LimitNumber?: number) => {
     }
   });
 
-  //set love quantity Value
+  // set product quantity Value in local storage
   Product?.map((i) => {
-    if (i.id === LoveID) {
-      i.LoveQuantity = QuantityLove;
+    const DefaultLoveQuantity = 0;
+    // set defualt value to zero
+    if (localStorage.getItem(i.id.toString()) === null) {
+      localStorage.setItem(i.id.toString(), DefaultLoveQuantity.toString());
     }
-  });
-
-  //Save in local storage set love quantity valu
-  localStorage.setItem(LoveID.toString(), QuantityLove.toString());
-  Product?.map((i) => {
-    if (localStorage.getItem(i.id.toString()) !== null) {
-      i.LoveQuantity = Number(localStorage.getItem(i.id.toString()));
-    }
+    // set Value
+    i.LoveQuantity = Number(localStorage.getItem(i.id.toString()));
   });
 
   // set product quantity Value in local storage

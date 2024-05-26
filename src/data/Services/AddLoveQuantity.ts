@@ -1,25 +1,12 @@
-import { create } from "zustand";
-
-interface LoveStore {
-  LoveID: number;
-  QuantityLove: number;
-  increaseLoveQuantity: (id: number) => void;
-  decreaseLoveQuantity: (id: number) => void;
-}
-
-const AddLoveQuantity = create<LoveStore>((set) => ({
-  LoveID: 0,
-  QuantityLove: 0,
-  increaseLoveQuantity: (id) =>
-    set(() => ({
-      LoveID: id,
-      QuantityLove: 1,
-    })),
-  decreaseLoveQuantity: (id) =>
-    set(() => ({
-      LoveID: id,
-      QuantityLove: 0,
-    })),
-}));
-
-export default AddLoveQuantity;
+export const IncreaseLoveQuantity = (id: number) => {
+  const NewlocalQuantity = 1;
+  localStorage.setItem(id.toString(), NewlocalQuantity.toString());
+  // for rerender when updated
+  return NewlocalQuantity;
+};
+export const DecreaseLoveQuantity = (id: number) => {
+  const NewlocalQuantity = 0;
+  localStorage.setItem(id.toString(), NewlocalQuantity.toString());
+  // for rerender when updated
+  return NewlocalQuantity;
+};
