@@ -1,13 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-import {
-  Text,
-  Grid,
-  GridItem,
-  Image,
-  List,
-  ListItem,
-  ListIcon,
-} from "@chakra-ui/react";
+import { Text, Grid, GridItem, Image } from "@chakra-ui/react";
+import { List, ListItem, ListIcon } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import logo from "../../public/image/Logo.png";
 import { ArrowRightIcon, EmailIcon, PhoneIcon } from "@chakra-ui/icons";

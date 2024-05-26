@@ -12,25 +12,21 @@ const CategoryAddItem = (Category: string) => {
     }
   });
 
-  // set product quantity Value in local storage
+  // set love quantity Value & default value in local storage
   CategoriesItem?.map((i) => {
     const DefaultLoveQuantity = 0;
-    // set defualt value to zero
     if (localStorage.getItem(i.id.toString()) === null) {
       localStorage.setItem(i.id.toString(), DefaultLoveQuantity.toString());
     }
-    // set Value
     i.LoveQuantity = Number(localStorage.getItem(i.id.toString()));
   });
 
-  // set product quantity Value in local storage
+  // set product quantity Value & default value in local storage
   CategoriesItem?.map((i) => {
     const DefaultProductQuantity = 0;
-    // set defualt value to zero
     if (localStorage.getItem(i.title) === null) {
       localStorage.setItem(i.title, DefaultProductQuantity.toString());
     }
-    // set Value
     i.ProductQuantity = Number(localStorage.getItem(i.title));
   });
 
