@@ -61,6 +61,7 @@ export const LoveButton = () => {
                   title={pro.title}
                   price={pro.price}
                   image={pro.image}
+                  LoveQuantity={pro.LoveQuantity}
                 />
               ) : null
             )}
