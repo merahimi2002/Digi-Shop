@@ -1,3 +1,4 @@
+import { ProductStore } from "../Services/test";
 import useProductsList from "./UseGetProduct";
 
 const ProductAddItem = (LimitNumber?: number) => {
@@ -12,23 +13,32 @@ const ProductAddItem = (LimitNumber?: number) => {
     }
   });
 
-  // set love quantity Value & default value in local storage
-  Product?.map((i) => {
-    const DefaultLoveQuantity = 0;
-    if (localStorage.getItem(i.id.toString()) === null) {
-      localStorage.setItem(i.id.toString(), DefaultLoveQuantity.toString());
-    }
-    i.LoveQuantity = Number(localStorage.getItem(i.id.toString()));
-  });
+  // // set love quantity Value & default value in local storage
+  // Product?.map((i) => {
+  //   const DefaultLoveQuantity = 0;
+  //   if (localStorage.getItem(i.id.toString()) === null) {
+  //     localStorage.setItem(i.id.toString(), DefaultLoveQuantity.toString());
+  //   }
+  //   i.LoveQuantity = Number(localStorage.getItem(i.id.toString()));
+  // });
 
-  // set product quantity Value & default value in local storage
-  Product?.map((i) => {
-    const DefaultProductQuantity = 0;
-    if (localStorage.getItem(i.title) === null) {
-      localStorage.setItem(i.title, DefaultProductQuantity.toString());
-    }
-    i.ProductQuantity = Number(localStorage.getItem(i.title));
-  });
+  // // set product quantity Value & default value in local storage
+  // Product?.map((i) => {
+  //   const DefaultProductQuantity = 0;
+  //   if (localStorage.getItem(i.title) === null) {
+  //     localStorage.setItem(i.title, DefaultProductQuantity.toString());
+  //   }
+  //   i.ProductQuantity = Number(localStorage.getItem(i.title));
+  // });
+
+  const {setProduct, ProductState } = ProductStore();
+  console.log(ProductState);
+  if (Product !== undefined){
+    setProduct(Product)
+  }
+  
+ 
+
 
   return { Product, ProductError, ProductLoading };
 };
