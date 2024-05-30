@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button, Grid, GridItem, Spinner, Text } from "@chakra-ui/react";
-import { useGetCategory } from "../../data/useGetCategories";
+import useGetCategory from "../../data/useGetCategories";
 
 const Category = () => {
   //Categories

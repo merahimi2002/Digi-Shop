@@ -2,16 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import BaseUrl from "./BaseUrl";
 
-interface CategoryItemProps {
-  id: number;
-  title: string;
-  price: number;
-  category: string;
-  description: string;
-  image: string;
-}
 
-export const useGetCategory = () => {
+const useGetCategory = () => {
   const fetchCategory = () =>
     axios.get<[]>(BaseUrl("products/categories", "")).then((res) => res.data);
   const {
@@ -25,18 +17,6 @@ export const useGetCategory = () => {
   return { Categories, CategoriesLoading, CategoriesError };
 };
 
-export const useGetCategoryItem = (VarUrl: string) => {
-  const fetchCategoryItem = () =>
-    axios
-      .get<CategoryItemProps[]>(BaseUrl("products/category/", VarUrl))
-      .then((res) => res.data);
-  const {
-    data: CategoriesItem,
-    isLoading: CategoriesItemLoading,
-    error: CategoriesItemError,
-  } = useQuery<CategoryItemProps[] ,Error>({
-    queryKey: ["CategoryItem"],
-    queryFn: fetchCategoryItem,
-  });
-  return { CategoriesItem, CategoriesItemLoading, CategoriesItemError };
-};
+export default useGetCategory
+
+

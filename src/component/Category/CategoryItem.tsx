@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Grid, GridItem, Image, Text } from "@chakra-ui/react";
-import {useGetCategoryItem } from "../../data/useGetCategories";
+import useGetCategoryItem  from "../../data/useGetCategoriesItem";
 import ProductCardSkeletons from "../Product/ProductCardSkeletons";
 import ProductCard from "../Product/ProductCard";
 import Error from "../../../public/image/404.png";
