@@ -11,7 +11,6 @@ import useGetProduct from "../../data/useGetProducts";
 import ProductFavoriteCart from "../Product/ProductFavoriteCart";
 import ProductShoppingCart from "../Product/ProductShoppingCart";
 
-
 export const ShopButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { Product } = useGetProduct("");
@@ -24,7 +23,7 @@ export const ShopButton = () => {
   });
   let TotalPrice = 0;
   Product?.map((i) => {
-    TotalPrice = TotalPrice + (ProductState[i.id].ProductQuantity * i.price);
+    TotalPrice = TotalPrice + ProductState[i.id].ProductQuantity * i.price;
   });
 
   return (
@@ -58,11 +57,13 @@ export const ShopButton = () => {
                 />
               ) : null
             )}
-            <Flex alignItems="center" justifyContent="center">
+            <Flex alignItems="center" justifyContent="center" mt={8}>
               <Text fontSize="30px" fontWeight="semibold">
                 Total :
-              </Text >
-              <Text textStyle="Price" fontSize="28px" pl={5}>{formatCurrency(TotalPrice)}</Text>
+              </Text>
+              <Text textStyle="Price" fontSize="28px" pl={5}>
+                {formatCurrency(TotalPrice)}
+              </Text>
             </Flex>
             <Button variant="ShopButton" color="FirstColor" bg="SecondColor">
               Payment

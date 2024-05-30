@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
 
 interface ProductStateProps {
@@ -19,112 +20,117 @@ type Actions = {
 };
 
 export const ProductQuantityStore = create<State & Actions>()(
-  immer((set) => ({
-    ProductState: [
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-      {
-        LoveQuantity: 0,
-        ProductQuantity: 0,
-      },
-    ],
-    IncreaseLoveQuantity: (ProductId: number) =>
-      set((state) => {
-        state.ProductState[ProductId].LoveQuantity = 1;
-      }),
-    DecreaseLoveQuantity: (ProductId: number) =>
-      set((state) => {
-        state.ProductState[ProductId].LoveQuantity = 0;
-      }),
-    IncreaseProductQuantity: (ProductId: number) =>
-      set((state) => {
-        state.ProductState[ProductId].ProductQuantity++;
-      }),
-    DecreaseProductQuantity: (ProductId: number) =>
-      set((state) => {
-        state.ProductState[ProductId].ProductQuantity--;
-      }),
-    DeleteProductQuantity: (ProductId: number) =>
-      set((state) => {
-        state.ProductState[ProductId].ProductQuantity = 0;
-      }),
-  }))
+  persist(
+    immer((set) => ({
+      ProductState: [
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+        {
+          LoveQuantity: 0,
+          ProductQuantity: 0,
+        },
+      ],
+      IncreaseLoveQuantity: (ProductId: number) =>
+        set((state) => {
+          state.ProductState[ProductId].LoveQuantity = 1;
+        }),
+      DecreaseLoveQuantity: (ProductId: number) =>
+        set((state) => {
+          state.ProductState[ProductId].LoveQuantity = 0;
+        }),
+      IncreaseProductQuantity: (ProductId: number) =>
+        set((state) => {
+          state.ProductState[ProductId].ProductQuantity++;
+        }),
+      DecreaseProductQuantity: (ProductId: number) =>
+        set((state) => {
+          state.ProductState[ProductId].ProductQuantity--;
+        }),
+      DeleteProductQuantity: (ProductId: number) =>
+        set((state) => {
+          state.ProductState[ProductId].ProductQuantity = 0;
+        }),
+    })),
+    {
+      name: "Product-Storage",
+    }
+  )
 );
