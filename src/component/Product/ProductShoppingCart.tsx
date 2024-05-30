@@ -23,7 +23,7 @@ const ProductFavoriteCart = ({ image, title, price, id }: ProductCartProps) => {
         <Text fontSize="18px">{formatCurrency(price)}</Text>
         <Box display="flex" justifyContent="flex-start" alignItems="center">
           <Text textStyle="Price" fontSize="20px" mr={2}>
-            {ProductState[id].ProductQuantity}
+            {ProductState[id].ProductQuantity} x
           </Text>
           <Text fontSize="18px">items</Text>
         </Box>

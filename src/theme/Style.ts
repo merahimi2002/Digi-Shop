@@ -17,6 +17,12 @@ export const styles = {
     strong: {
       color: "FirstColor",
     },
+    html:{
+      overflowX: "hidden"
+    },
+    Body:{
+      overflowX: "hidden"
+    }
     // "*": {},
   },
 };

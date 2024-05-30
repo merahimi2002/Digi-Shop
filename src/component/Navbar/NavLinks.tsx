@@ -9,7 +9,7 @@ interface MenuToggleProps {
 
 export const MenuToggle = ({ toggle, isOpen }: MenuToggleProps) => {
   return (
-    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
+    <Box display={{ base: "block", lg: "none" }} onClick={toggle}>
       {isOpen ? (
         <Icon boxSize={10} as={MdClose} color="red.500" mt={["10px", "0px"]} />
       ) : (
@@ -21,16 +21,16 @@ export const MenuToggle = ({ toggle, isOpen }: MenuToggleProps) => {
 
 export const MenuLinks = ({ isOpen }: { isOpen: boolean }) => {
   return (
-    <Center h={{ base: "auto", md: "100%" }}>
+    <Center h={{ base: "auto", lg: "100%" }}>
       <Box
-        display={{ base: isOpen ? "block" : "none", md: "block" }}
-        flexBasis={{ base: "100%", md: "auto" }}
+        display={{ base: isOpen ? "block" : "none", lg: "block" }}
+        flexBasis={{ base: "100%", lg: "auto" }}
       >
         <Stack
           spacing={[3, 8]}
           align="flex-start"
           justify={["flex-start", "center"]}
-          direction={["column", "row"]}
+          direction={["column", "column", "column", "row"]}
           fontSize={["md", "xl"]}
           fontWeight="semibold"
           color="black"

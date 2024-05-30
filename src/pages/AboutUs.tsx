@@ -81,6 +81,7 @@ const AboutUs = () => {
         templateColumns="repeat(12, 1fr)"
         mb="100px"
         mt="50px"
+
         gap={10}
         p={{ base: "10px", md: "10px 80px" }}
       >
@@ -93,7 +94,7 @@ const AboutUs = () => {
         </GridItem>
         <GridItem
           h="100%"
-          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          colSpan={{ base: 10, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
           px={5}
           mb={10}
         >
@@ -127,7 +128,7 @@ const AboutUs = () => {
         </GridItem>
         <GridItem
           h="100%"
-          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          colSpan={{ base: 10, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
           px={5}
           mb={10}
         >
@@ -161,7 +162,7 @@ const AboutUs = () => {
         </GridItem>
         <GridItem
           h="100%"
-          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          colSpan={{ base: 10, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
           px={5}
           mb={10}
         >
@@ -196,7 +197,7 @@ const AboutUs = () => {
         </GridItem>
         <GridItem
           h="100%"
-          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          colSpan={{ base: 10, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
           px={5}
           mb={10}
         >
@@ -231,7 +232,7 @@ const AboutUs = () => {
         </GridItem>
         <GridItem
           h="100%"
-          colSpan={{ base: 12, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
+          colSpan={{ base: 10, sm: 10, md: 6, lg: 5, xl: 4, "2xl": 3 }}
           px={5}
           mb={10}
         >

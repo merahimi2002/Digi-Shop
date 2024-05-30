@@ -11,10 +11,10 @@ const ProductPage = () => {
       padding={{ base: "10px", md: "10px 80px" }}
       gap={5}
     >
-      <GridItem colSpan={1}>
+      <GridItem colSpan={{ base: 5, md: 2, lg: 1 }}>
         <Category />
       </GridItem>
-      <GridItem colSpan={4}>
+      <GridItem colSpan={{ base: 5, md: 3, lg: 4 }}>
         {window.location.pathname == "/Digi-Shop/product" ? <Product /> : null}
         <Outlet />
       </GridItem>

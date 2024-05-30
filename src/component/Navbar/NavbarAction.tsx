@@ -4,7 +4,7 @@ import { LoginButton, LoveButton, ShopButton } from "./NavbarActionItem";
 
 const NavBarAction = () => {
   return (
-    <Center h={["auto", "100%"]} mt={["10px", "0px"]}>
+    <Center h={{base : "auto" , lg :"100%"}} mt={["10px", "0px"]}>
       <AvatarGroup>
         <ShopButton />
         <LoveButton />

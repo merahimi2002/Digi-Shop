@@ -129,7 +129,6 @@ export const LoginButton = () => {
       p={0}
       bg="NoColor"
       _hover={{ bgColor: "NoColor" }}
-      display={["none", "flex"]}
     >
       <Avatar
         icon={<FiLogIn />}
