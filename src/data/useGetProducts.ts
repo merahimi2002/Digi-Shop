@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import BaseUrl from "../BaseUrl";
+import BaseUrl from "./BaseUrl";
 
 interface ProductsProps {
   id: number;
@@ -9,12 +9,9 @@ interface ProductsProps {
   category: string;
   description: string;
   image: string;
-  // add Attribute
-  LoveQuantity: number;
-  ProductQuantity: number;
 }
 
-const useProductList = (VarUrl: string) => {
+const useGetProduct = (VarUrl: string) => {
   const fetchProducts = () =>
     axios
       .get<ProductsProps[]>(BaseUrl("products", VarUrl))
@@ -30,4 +27,4 @@ const useProductList = (VarUrl: string) => {
   return { Product, ProductLoading, ProductError };
 };
 
-export default useProductList;
+export default useGetProduct;

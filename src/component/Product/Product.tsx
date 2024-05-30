@@ -1,11 +1,11 @@
 import { Grid, GridItem, Text } from "@chakra-ui/react";
-import ProductAddItem from "../../data/Product/ProductAddItem";
+import useGetProduct from "../../data/useGetProducts";
 import ProductCardSkeletons from "./ProductCardSkeletons";
 import ProductCard from "./ProductCard";
 
 const Product = () => {
   //Product
-  const { Product, ProductError, ProductLoading } = ProductAddItem(20);
+  const { Product, ProductError, ProductLoading } = useGetProduct("");
 
   //Product skeletons
   const Skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -36,8 +36,6 @@ const Product = () => {
             price={pro.price}
             description={pro.description}
             image={pro.image}
-            LoveQuantity={pro.LoveQuantity}
-            ProductQuantity={pro.ProductQuantity}
           />
         </GridItem>
       ))}

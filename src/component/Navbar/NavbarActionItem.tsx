@@ -5,7 +5,10 @@ import { Avatar, AvatarBadge, Button, useDisclosure } from "@chakra-ui/react";
 import { FiLogIn, FiShoppingCart } from "react-icons/fi";
 import { GiEternalLove } from "react-icons/gi";
 import { ProductCart } from "../Product/ProductCart";
-import ProductAddItem from "../../data/Product/ProductAddItem";
+import { ProductQuantityStore } from "../../data/ProductQuantityStore";
+import useGetProduct from "../../data/useGetProducts";
+
+
 
 export const ShopButton = () => {
   return (
@@ -26,11 +29,12 @@ export const ShopButton = () => {
 
 export const LoveButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { Product } = ProductAddItem();
+  const { Product } = useGetProduct("");
+  const { ProductState} = ProductQuantityStore();
 
   let SumLoveQuantity = 0;
   Product?.map((i) => {
-    SumLoveQuantity = SumLoveQuantity + i.LoveQuantity;
+    SumLoveQuantity = SumLoveQuantity + ProductState[i.id].LoveQuantity;
   });
 
   return (
@@ -54,14 +58,13 @@ export const LoveButton = () => {
           <DrawerHeader>Favorite Cart</DrawerHeader>
           <DrawerBody>
             {Product?.map((pro) =>
-              pro.LoveQuantity > 0 ? (
+              ProductState[pro.id].LoveQuantity > 0 ? (
                 <ProductCart
                   key={pro.id}
                   id={pro.id}
                   title={pro.title}
                   price={pro.price}
                   image={pro.image}
-                  LoveQuantity={pro.LoveQuantity}
                 />
               ) : null
             )}

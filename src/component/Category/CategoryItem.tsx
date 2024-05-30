@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { Grid, GridItem, Image, Text } from "@chakra-ui/react";
-import CategoryAddItem from "../../data/Category/CategoryAddItem";
+import {useGetCategoryItem } from "../../data/useGetCategories";
 import ProductCardSkeletons from "../Product/ProductCardSkeletons";
 import ProductCard from "../Product/ProductCard";
 import Error from "../../../public/image/404.png";
+
 
 const CategoriyItem = () => {
   const params = useParams();
@@ -14,7 +15,7 @@ const CategoriyItem = () => {
     UrlCategory = params.category;
   }
   const { CategoriesItem, CategoriesItemError, CategoriesItemLoading } =
-    CategoryAddItem(UrlCategory);
+    useGetCategoryItem(UrlCategory);
 
   //Category item skeletons
   const Skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -50,8 +51,6 @@ const CategoriyItem = () => {
             price={pro.price}
             description={pro.description}
             image={pro.image}
-            LoveQuantity={pro.LoveQuantity}
-            ProductQuantity={pro.ProductQuantity}
           />
         </GridItem>
       ))}

@@ -1,14 +1,10 @@
-import { useState } from "react";
 import { Box, Button, Card, CardBody, CardHeader } from "@chakra-ui/react";
 import { Flex, Icon, Image, Text } from "@chakra-ui/react";
 import { FaSearchPlus, FaShoppingCart } from "react-icons/fa";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { TextSummarizer } from "../../services/TextSummarizer";
 import { formatCurrency } from "../../services/formatCurrency";
-import { IncreaseProductQuantity } from "../../data/Services/AddProductQuantity";
-import { DecreaseProductQuantity } from "../../data/Services/AddProductQuantity";
-import { IncreaseLoveQuantity } from "../../data/Services/AddLoveQuantity";
-import { DecreaseLoveQuantity } from "../../data/Services/AddLoveQuantity";
+import { ProductQuantityStore } from "../../data/ProductQuantityStore";
 
 interface ProductsCardProps {
   id: number;
@@ -16,8 +12,6 @@ interface ProductsCardProps {
   price: number;
   description: string;
   image: string;
-  LoveQuantity: number;
-  ProductQuantity: number;
 }
 
 const ProductCard = ({
@@ -26,16 +20,8 @@ const ProductCard = ({
   title,
   description,
   price,
-  LoveQuantity,
-  ProductQuantity,
 }: ProductsCardProps) => {
-  // for rerender when updated
-  const [LoveQuantityRender, setLoveQuantityRender] = useState(LoveQuantity);
-
-  // for rerender when updated
-  const [ProductQuantityRender, setProductQuantityRender] =
-    useState(ProductQuantity);
-
+  const { ProductState , IncreaseLoveQuantity , DecreaseLoveQuantity } = ProductQuantityStore();
   return (
     <Card boxShadow="base">
       <CardHeader p={5}>
@@ -53,10 +39,10 @@ const ProductCard = ({
         </Text>
         <Flex align="center" justifyContent="center">
           <Box display="flex">
-            {LoveQuantityRender === 0 ? (
+            {ProductState[id].LoveQuantity === 0 ? (
               <Button
                 variant="Shop"
-                onClick={() => setLoveQuantityRender(IncreaseLoveQuantity(id))}
+                onClick={() => IncreaseLoveQuantity(id)}
               >
                 <Icon
                   textStyle="Icon"
@@ -67,12 +53,12 @@ const ProductCard = ({
             ) : (
               <Button
                 variant="Shop"
-                onClick={() => setLoveQuantityRender(DecreaseLoveQuantity(id))}
+                onClick={() => DecreaseLoveQuantity(id)}
               >
                 <Icon textStyle="Icon" color="FirstColor" as={FaHeart}></Icon>
               </Button>
             )}
-            {ProductQuantityRender === 0 ? (
+            {/* {ProductQuantityRender === 0 ? (
               <Button
                 variant="Shop"
                 onClick={() =>
@@ -109,7 +95,7 @@ const ProductCard = ({
                   </Box>
                 </Button>
               </Box>
-            )}
+            )} */}
 
             <Button variant="Shop">
               <Icon

@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import BaseUrl from "../BaseUrl";
+import BaseUrl from "./BaseUrl";
 
 interface CategoryItemProps {
   id: number;
@@ -9,9 +9,6 @@ interface CategoryItemProps {
   category: string;
   description: string;
   image: string;
-  // add Attribute
-  LoveQuantity: number;
-  ProductQuantity: number;
 }
 
 export const useGetCategory = () => {
