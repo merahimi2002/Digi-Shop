@@ -24,5 +24,13 @@ export const Button = {
         color: "White",
       }
     },
+    ShopButton:{
+      fontSize: "24px",
+      p: "35px 60px",
+      display:"flex",
+      m:"auto",
+      mt:"30px",
+      border:"1px solid"
+    }
   },
 };

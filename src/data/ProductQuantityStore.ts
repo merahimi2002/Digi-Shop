@@ -13,6 +13,9 @@ type State = {
 type Actions = {
   IncreaseLoveQuantity: (ProductId: number) => void;
   DecreaseLoveQuantity: (ProductId: number) => void;
+  IncreaseProductQuantity: (ProductId: number) => void;
+  DecreaseProductQuantity: (ProductId: number) => void;
+  DeleteProductQuantity: (ProductId: number) => void;
 };
 
 export const ProductQuantityStore = create<State & Actions>()(
@@ -110,6 +113,18 @@ export const ProductQuantityStore = create<State & Actions>()(
     DecreaseLoveQuantity: (ProductId: number) =>
       set((state) => {
         state.ProductState[ProductId].LoveQuantity = 0;
+      }),
+    IncreaseProductQuantity: (ProductId: number) =>
+      set((state) => {
+        state.ProductState[ProductId].ProductQuantity++;
+      }),
+    DecreaseProductQuantity: (ProductId: number) =>
+      set((state) => {
+        state.ProductState[ProductId].ProductQuantity--;
+      }),
+    DeleteProductQuantity: (ProductId: number) =>
+      set((state) => {
+        state.ProductState[ProductId].ProductQuantity = 0;
       }),
   }))
 );

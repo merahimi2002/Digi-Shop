@@ -21,7 +21,13 @@ const ProductCard = ({
   description,
   price,
 }: ProductsCardProps) => {
-  const { ProductState , IncreaseLoveQuantity , DecreaseLoveQuantity } = ProductQuantityStore();
+  const {
+    ProductState,
+    IncreaseLoveQuantity,
+    DecreaseLoveQuantity,
+    IncreaseProductQuantity,
+    DecreaseProductQuantity,
+  } = ProductQuantityStore();
   return (
     <Card boxShadow="base">
       <CardHeader p={5}>
@@ -40,10 +46,7 @@ const ProductCard = ({
         <Flex align="center" justifyContent="center">
           <Box display="flex">
             {ProductState[id].LoveQuantity === 0 ? (
-              <Button
-                variant="Shop"
-                onClick={() => IncreaseLoveQuantity(id)}
-              >
+              <Button variant="Shop" onClick={() => IncreaseLoveQuantity(id)}>
                 <Icon
                   textStyle="Icon"
                   color="FirstColor"
@@ -51,19 +54,14 @@ const ProductCard = ({
                 ></Icon>
               </Button>
             ) : (
-              <Button
-                variant="Shop"
-                onClick={() => DecreaseLoveQuantity(id)}
-              >
+              <Button variant="Shop" onClick={() => DecreaseLoveQuantity(id)}>
                 <Icon textStyle="Icon" color="FirstColor" as={FaHeart}></Icon>
               </Button>
             )}
-            {/* {ProductQuantityRender === 0 ? (
+            {ProductState[id].ProductQuantity === 0 ? (
               <Button
                 variant="Shop"
-                onClick={() =>
-                  setProductQuantityRender(IncreaseProductQuantity(title))
-                }
+                onClick={() => IncreaseProductQuantity(id)}
               >
                 <Icon
                   textStyle="Icon"
@@ -75,27 +73,23 @@ const ProductCard = ({
               <Box display="flex" alignItems="center">
                 <Button
                   variant="Shop"
-                  onClick={() =>
-                    setProductQuantityRender(DecreaseProductQuantity(title))
-                  }
+                  onClick={() => DecreaseProductQuantity(id)}
                 >
                   <Box fontSize="28px" mt="-5px" color="red">
                     -
                   </Box>
                 </Button>
-                <Box fontSize="20px">{ProductQuantityRender}</Box>
+                <Box fontSize="20px">{ProductState[id].ProductQuantity}</Box>
                 <Button
                   variant="Shop"
-                  onClick={() =>
-                    setProductQuantityRender(IncreaseProductQuantity(title))
-                  }
+                  onClick={() => IncreaseProductQuantity(id)}
                 >
                   <Box fontSize="28px" mt="-5px" color="green">
                     +
                   </Box>
                 </Button>
               </Box>
-            )} */}
+            )}
 
             <Button variant="Shop">
               <Icon
