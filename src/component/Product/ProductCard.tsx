@@ -5,6 +5,7 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { TextSummarizer } from "../../services/TextSummarizer";
 import { formatCurrency } from "../../services/formatCurrency";
 import { ProductQuantityStore } from "../../data/ProductQuantityStore";
+import ratingFunction from "../../services/ratingFunction";
 
 interface ProductsCardProps {
   id: number;
@@ -12,6 +13,7 @@ interface ProductsCardProps {
   price: number;
   description: string;
   image: string;
+  rate: number;
 }
 
 const ProductCard = ({
@@ -20,6 +22,7 @@ const ProductCard = ({
   title,
   description,
   price,
+  rate,
 }: ProductsCardProps) => {
   const {
     ProductState,
@@ -34,16 +37,20 @@ const ProductCard = ({
         <Image w="100%" h="250px" objectFit="contain" src={image}></Image>
       </CardHeader>
       <CardBody bg="SecondColor">
+        
         <Text textStyle="TitrColorFul" mb={4} lineHeight={1.5}>
           <TextSummarizer text={title} maxChars={20} />
         </Text>
         <Text minH={18}>
           <TextSummarizer text={description} maxChars={80} />
         </Text>
-        <Text textAlign="right" textStyle="Price">
-          {formatCurrency(price)}
-        </Text>
-        <Flex align="center" justifyContent="center">
+        <Flex justifyContent="space-between" alignItems="center">
+          {ratingFunction(rate)}
+          <Text textAlign="right" textStyle="Price">
+            {formatCurrency(price)}
+          </Text>
+        </Flex>
+        <Flex align="center" justifyContent="center" mt={6}>
           <Box display="flex">
             {ProductState[id].LoveQuantity === 0 ? (
               <Button variant="Shop" onClick={() => IncreaseLoveQuantity(id)}>

@@ -51,6 +51,7 @@ const CategoriyItem = () => {
             price={pro.price}
             description={pro.description}
             image={pro.image}
+            rate={pro.rating.rate}
           />
         </GridItem>
       ))}

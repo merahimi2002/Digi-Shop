@@ -9,6 +9,10 @@ interface CategoryItemProps {
   category: string;
   description: string;
   image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
 }
 
 const useGetCategoryItem = (VarUrl: string) => {

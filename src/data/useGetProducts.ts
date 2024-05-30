@@ -9,6 +9,10 @@ interface ProductsProps {
   category: string;
   description: string;
   image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
 }
 
 const useGetProduct = (VarUrl: string) => {
