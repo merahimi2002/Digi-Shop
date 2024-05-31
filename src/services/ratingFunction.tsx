@@ -1,60 +1,30 @@
-import { Flex, Icon } from "@chakra-ui/react";
-import { FaStar, FaRegStar } from "react-icons/fa";
+import { Icon } from "@chakra-ui/react";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+
+function roundByNum(num: number, rounder: number) {
+  var multiplier = 1 / (rounder || 0.5);
+  return Math.round(num * multiplier) / multiplier;
+}
 
 const ratingFunction = (rate: number) => {
-  const rounded = Math.round(rate);
-  switch (rounded) {
-    case 1:
-      return (
-        <Flex>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-        </Flex>
-      );
-    case 2:
-      return (
-        <Flex>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-        </Flex>
-      );
-    case 3:
-      return (
-        <Flex>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-        </Flex>
-      );
-    case 4:
-      return (
-        <Flex>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>
-        </Flex>
-      );
-    case 5:
-      return (
-        <Flex>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-          <Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>
-        </Flex>
-      );
+  const FloatNum = roundByNum(rate, 0.5);
+  let IntegerNum = Math.floor(rate);
+  const Result = [];
+  // have 1 rataing
+  for (var i = 0; i < IntegerNum; i++) {
+    Result.push(<Icon fontSize="25px" color="#ffc107" as={FaStar}></Icon>);
   }
+  // have 0.5 rataing
+  if (FloatNum !== IntegerNum) {
+    Result.push(
+      <Icon fontSize="25px" color="#ffc107" as={FaStarHalfAlt}></Icon>
+    );
+    IntegerNum = IntegerNum + 1;
+  }
+  // have 0 rataing
+  for (var i = IntegerNum; i < 5; i++) {
+    Result.push(<Icon fontSize="25px" color="#ffc107" as={FaRegStar}></Icon>);
+  }
+  return Result;
 };
-
 export default ratingFunction;

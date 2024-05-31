@@ -37,7 +37,6 @@ const ProductCard = ({
         <Image w="100%" h="250px" objectFit="contain" src={image}></Image>
       </CardHeader>
       <CardBody bg="SecondColor">
-        
         <Text textStyle="TitrColorFul" mb={4} lineHeight={1.5}>
           <TextSummarizer text={title} maxChars={20} />
         </Text>
@@ -45,7 +44,7 @@ const ProductCard = ({
           <TextSummarizer text={description} maxChars={80} />
         </Text>
         <Flex justifyContent="space-between" alignItems="center">
-          {ratingFunction(rate)}
+          <Flex>{ratingFunction(rate)}</Flex>
           <Text textAlign="right" textStyle="Price">
             {formatCurrency(price)}
           </Text>
