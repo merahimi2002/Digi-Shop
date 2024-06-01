@@ -5,6 +5,7 @@ import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import ErrorPage from "./ErrorPage";
 import ProductPage from "../pages/ProductPage";
+import Product from "../component/Product/Product";
 import CategoriyItem from "../component/Category/CategoryItem";
 
 const router = createBrowserRouter([
@@ -19,7 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/Digi-Shop/product",
         element: <ProductPage />,
-        children: [{ path: ":category", element: <CategoriyItem /> }],
+        children: [
+          { path: "", element: <Product /> },
+          { path: ":category", element: <CategoriyItem /> },
+        ],
       },
     ],
   },
