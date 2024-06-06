@@ -41,7 +41,7 @@ const ProductCard = ({
           <TextSummarizer text={title} maxChars={20} />
         </Text>
         <Text minH={18}>
-          <TextSummarizer text={description} maxChars={80} />
+          <TextSummarizer text={description} maxChars={70} />
         </Text>
         <Flex justifyContent="space-between" alignItems="center">
           <Flex>{ratingFunction(rate)}</Flex>

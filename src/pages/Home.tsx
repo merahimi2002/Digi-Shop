@@ -1,10 +1,10 @@
 import { Fragment } from "react/jsx-runtime";
 import { Link } from "react-router-dom";
-import { Button, Grid, GridItem, Icon, Image, Text } from "@chakra-ui/react";
-import { List, ListIcon, ListItem, Center } from "@chakra-ui/react";
+import { Box, Button, Grid, GridItem, Icon, Text } from "@chakra-ui/react";
+import { List, ListIcon, ListItem, Image } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
-import CarouselSlider from "../component/CarouselSlider";
+import Carousels from "../component/Carousel";
 import Slider01 from "../../public/image/Slider/Slider01.png";
 import Slider02 from "../../public/image/Slider/Slider02.png";
 import Slider03 from "../../public/image/Slider/Slider03.png";
@@ -13,13 +13,27 @@ import Electronic from "../../public/image/Homepage/Electronic.png";
 import Jewelery from "../../public/image/Homepage/Jewelery.png";
 import ManClothing from "../../public/image/Homepage/ManClothing.png";
 import WomanClothing from "../../public/image/Homepage/WomanClothing.png";
+import { ProductNewCarousel } from "../component/Product/ProductNewCarousel";
 
 const Home = () => {
   return (
     <Fragment>
-      <Center mt="100px" pb="30px" bgGradient="linear(to-b, #f2f6f9, #008080)">
-        <CarouselSlider Count={3} Slider={[Slider01, Slider02, Slider03]} />
-      </Center>
+      {/* Slider */}
+      <Box mt="100px" pb="30px" bgGradient="linear(to-b, #f2f6f9, #008080)">
+        <Carousels
+          Items={[
+            <Image m="auto" src={Slider01}></Image>,
+            <Image m="auto" src={Slider02}></Image>,
+            <Image m="auto" src={Slider03}></Image>,
+          ]}
+          ItemsBreakPoint={{
+            desktop: 1,
+            tablet: 1,
+            mobile: 1,
+          }}
+        />
+      </Box>
+      {/* about us */}
       <Grid
         templateColumns="repeat(12, 1fr)"
         mt="50px"
@@ -82,6 +96,7 @@ const Home = () => {
           </List>
         </GridItem>
       </Grid>
+      {/* Category */}
       <Grid
         templateColumns="repeat(4, 1fr)"
         mt="50px"
@@ -130,6 +145,20 @@ const Home = () => {
               src={ManClothing}
             ></Image>
           </Link>
+        </GridItem>
+      </Grid>
+      {/* new Product */}
+      <Grid
+        templateColumns="repeat(4, 1fr)"
+        mt="50px"
+        gap={5}
+        p={{ base: "10px", md: "10px 80px" }}
+      >
+        <GridItem colSpan={{ base: 4, md: 4 }}>
+          <Text textStyle="SpecialTitr">New Product</Text>
+        </GridItem>
+        <GridItem colSpan={{ base: 4, md: 4 }}>
+          <ProductNewCarousel />
         </GridItem>
       </Grid>
     </Fragment>
