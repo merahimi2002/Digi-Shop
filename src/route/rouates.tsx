@@ -14,11 +14,11 @@ const router = createHashRouter([
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/Digi-Shop/", element: <Home /> },
-      { path: "/Digi-Shop/about", element: <AboutUs /> },
-      { path: "/Digi-Shop/contact", element: <ContactUs /> },
+      { path: "/", element: <Home /> },
+      { path: "/about", element: <AboutUs /> },
+      { path: "/contact", element: <ContactUs /> },
       {
-        path: "/Digi-Shop/product",
+        path: "/product",
         element: <ProductPage />,
         children: [
           { path: "", element: <Product /> },

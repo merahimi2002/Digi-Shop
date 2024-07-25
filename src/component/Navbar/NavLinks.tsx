@@ -35,10 +35,10 @@ export const MenuLinks = ({ isOpen }: { isOpen: boolean }) => {
           fontWeight="semibold"
           color="black"
         >
-          <NavLink to="/Digi-Shop/">Home</NavLink>
-          <NavLink to="/Digi-Shop/about">About Us</NavLink>
-          <NavLink to="/Digi-Shop/contact">Contact Us</NavLink>
-          <NavLink to="/Digi-Shop/product">Product</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About Us</NavLink>
+          <NavLink to="/contact">Contact Us</NavLink>
+          <NavLink to="/product">Product</NavLink>
         </Stack>
       </Box>
     </Center>
