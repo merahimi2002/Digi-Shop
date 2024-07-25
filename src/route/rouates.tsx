@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/Digi-Shop/", element: <Home /> },
       { path: "/Digi-Shop/about", element: <AboutUs /> },
