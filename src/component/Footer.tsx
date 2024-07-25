@@ -16,7 +16,7 @@ const Footer = () => {
       mt={10}
     >
       <GridItem colSpan={[12, 3]}>
-        <NavLink to="/Digi-Shop">
+        <NavLink to="/Digi-Shop/">
           <Image src={logo} w={170} mb={5}></Image>
         </NavLink>
         <Text color="black">
@@ -46,7 +46,7 @@ const Footer = () => {
               as={ArrowRightIcon}
               color="FirstColor"
             ></ListIcon>
-            <NavLink to="/Digi-Shop">Home</NavLink>
+            <NavLink to="/Digi-Shop/">Home</NavLink>
           </ListItem>
           <ListItem
             fontSize="18px"

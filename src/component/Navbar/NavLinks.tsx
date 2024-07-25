@@ -35,7 +35,7 @@ export const MenuLinks = ({ isOpen }: { isOpen: boolean }) => {
           fontWeight="semibold"
           color="black"
         >
-          <NavLink to="/Digi-Shop">Home</NavLink>
+          <NavLink to="/Digi-Shop/">Home</NavLink>
           <NavLink to="/Digi-Shop/about">About Us</NavLink>
           <NavLink to="/Digi-Shop/contact">Contact Us</NavLink>
           <NavLink to="/Digi-Shop/product">Product</NavLink>
